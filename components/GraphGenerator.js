@@ -1,7 +1,6 @@
 import * as d3 from "d3";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import styles from "./forceGraph.module.css";
-import { filter } from "d3";
 
 export function runForceGraph(
   container,
@@ -90,6 +89,18 @@ export function runForceGraph(
       d3.forceCollide().radius((d) => d.size / 2 + 5)
     )
     .force("center", d3.forceCenter(0, 0));
+
+  const clusters = {
+    1: 0,
+    2: width,
+  };
+
+  simulation.force(
+    "x",
+    d3.forceX().x(function (d) {
+      return clusters[d.group];
+    })
+  );
 
   const svg = d3
     .select(container)

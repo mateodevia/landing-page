@@ -74,7 +74,7 @@ const data = {
       color: "#fcd303",
       type: "subject",
       text: "Black",
-      group: 1,
+      group: 2,
     },
     {
       id: "Testing",
@@ -82,7 +82,7 @@ const data = {
       color: "#e8314c",
       type: "subject",
       text: "White",
-      group: 1,
+      group: 2,
     },
     {
       id: "UX",
@@ -114,7 +114,7 @@ const data = {
       color: "#73a9f5",
       type: "subject",
       text: "White",
-      group: 1,
+      group: 2,
     },
     {
       id: "AWS",
@@ -122,7 +122,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/aws.svg",
-      group: 1,
+      group: 2,
     },
     {
       id: "Node JS",
@@ -194,7 +194,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/firebase.svg",
-      group: 1,
+      group: 2,
     },
     {
       id: "GitHub",
@@ -210,7 +210,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/heroku.svg",
-      group: 1,
+      group: 2,
     },
     {
       id: "Java",
