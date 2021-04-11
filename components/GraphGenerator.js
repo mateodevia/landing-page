@@ -89,18 +89,12 @@ export function runForceGraph(
       "collision",
       d3.forceCollide().radius((d) => d.size / 2 + 5)
     )
-    .force("x", d3.forceX())
-    .force("y", d3.forceY());
+    .force("center", d3.forceCenter(0, 0));
 
   const svg = d3
     .select(container)
     .append("svg")
-    .attr("viewBox", [-width / 2, -height / 2, width, height])
-    .call(
-      d3.zoom().on("zoom", function (e) {
-        svg.attr("transform", e.transform);
-      })
-    );
+    .attr("viewBox", [-width / 2, -height / 2, width, height]);
 
   const link = svg
     .append("g")

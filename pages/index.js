@@ -8,6 +8,7 @@ export default function Home() {
         <title>Mateo Devia</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <h1>My Skills</h1>
       <SkillsGraph />
     </div>
   );
