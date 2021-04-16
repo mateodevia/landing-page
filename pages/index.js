@@ -1,15 +1,24 @@
 import Head from "next/head";
-import SkillsGraph from "../components/SkillsGraph";
+import StartSection from "../components/StartSection/StartPage";
+import SkillsGraph from "../components/SkillsGraph/SkillsGraph";
+import React from "react";
 
 export default function Home() {
   return (
-    <div>
+    <React.Fragment>
       <Head>
         <title>Mateo Devia</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>My Skills</h1>
-      <SkillsGraph />
-    </div>
+      <div className="homePageContainer">
+        <section className="scrollSnapSection">
+          <StartSection handleLearnMoreButtonClick={() => {}} />
+        </section>
+        <section className="scrollSnapSection skills-section">
+          <h1>My Skills</h1>
+          <SkillsGraph />
+        </section>
+      </div>
+    </React.Fragment>
   );
 }

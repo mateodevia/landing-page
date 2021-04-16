@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useCallback } from "react";
-import { runForceGraph } from "../components/GraphGenerator";
+import { runForceGraph } from "./GraphGenerator";
 import styles from "./forceGraph.module.css";
 
 const data = {
@@ -33,7 +33,7 @@ const data = {
       size: 80,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/vue.svg",
+      icon: "/SkillsGraph/vue.svg",
       group: 1,
     },
     {
@@ -41,7 +41,7 @@ const data = {
       size: 100,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/react.svg",
+      icon: "/SkillsGraph/react.svg",
       group: 1,
     },
     {
@@ -49,7 +49,7 @@ const data = {
       size: 80,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/html.svg",
+      icon: "/SkillsGraph/html.svg",
       group: 1,
     },
     {
@@ -57,7 +57,7 @@ const data = {
       size: 90,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/css.svg",
+      icon: "/SkillsGraph/css.svg",
       group: 1,
     },
     {
@@ -65,7 +65,7 @@ const data = {
       size: 110,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/javascript.svg",
+      icon: "/SkillsGraph/javascript.svg",
       group: 1,
     },
     {
@@ -105,7 +105,7 @@ const data = {
       size: 40,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/nextjs.svg",
+      icon: "/SkillsGraph/nextjs.svg",
       group: 1,
     },
     {
@@ -121,7 +121,7 @@ const data = {
       size: 70,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/aws.svg",
+      icon: "/SkillsGraph/aws.svg",
       group: 2,
     },
     {
@@ -129,7 +129,7 @@ const data = {
       size: 90,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/nodejs.svg",
+      icon: "/SkillsGraph/nodejs.svg",
       group: 1,
     },
     {
@@ -137,7 +137,7 @@ const data = {
       size: 40,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/django.svg",
+      icon: "/SkillsGraph/django.svg",
       group: 1,
     },
     {
@@ -145,7 +145,7 @@ const data = {
       size: 70,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/mongo.svg",
+      icon: "/SkillsGraph/mongo.svg",
       group: 1,
     },
     {
@@ -153,7 +153,7 @@ const data = {
       size: 70,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/postgresql.svg",
+      icon: "/SkillsGraph/postgresql.svg",
       group: 1,
     },
     {
@@ -161,7 +161,7 @@ const data = {
       size: 40,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/python.svg",
+      icon: "/SkillsGraph/python.svg",
       group: 1,
     },
     {
@@ -169,7 +169,7 @@ const data = {
       size: 60,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/rabbitmq.svg",
+      icon: "/SkillsGraph/rabbitmq.svg",
       group: 1,
     },
     {
@@ -177,7 +177,7 @@ const data = {
       size: 40,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/circleci.svg",
+      icon: "/SkillsGraph/circleci.svg",
       group: 1,
     },
     {
@@ -185,7 +185,7 @@ const data = {
       size: 40,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/cypress.svg",
+      icon: "/SkillsGraph/cypress.svg",
       group: 1,
     },
     {
@@ -193,7 +193,7 @@ const data = {
       size: 40,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/firebase.svg",
+      icon: "/SkillsGraph/firebase.svg",
       group: 2,
     },
     {
@@ -201,7 +201,7 @@ const data = {
       size: 60,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/github.svg",
+      icon: "/SkillsGraph/github.svg",
       group: 1,
     },
     {
@@ -209,7 +209,7 @@ const data = {
       size: 40,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/heroku.svg",
+      icon: "/SkillsGraph/heroku.svg",
       group: 2,
     },
     {
@@ -217,7 +217,7 @@ const data = {
       size: 40,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/java.svg",
+      icon: "/SkillsGraph/java.svg",
       group: 1,
     },
     {
@@ -225,7 +225,7 @@ const data = {
       size: 40,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/typescript.svg",
+      icon: "/SkillsGraph/typescript.svg",
       group: 1,
     },
     {
@@ -233,7 +233,7 @@ const data = {
       size: 40,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/graphql.svg",
+      icon: "/SkillsGraph/graphql.svg",
       group: 1,
     },
     {
@@ -241,7 +241,7 @@ const data = {
       size: 40,
       color: "#f5f5f5",
       type: "tool",
-      icon: "/mocha.svg",
+      icon: "/SkillsGraph/mocha.svg",
       group: 1,
     },
   ],
