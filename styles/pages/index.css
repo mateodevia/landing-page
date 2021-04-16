@@ -1,4 +1,4 @@
-.homePageContainer {
+.home-page-container {
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
@@ -9,13 +9,8 @@
   scrollbar-width: thin;
 }
 
-.scrollSnapSection {
+.scroll-snap-section {
   scroll-snap-align: start;
-}
-
-.startPageSection {
-  height: 100vh;
-  background-color: red;
 }
 
 .skills-section {

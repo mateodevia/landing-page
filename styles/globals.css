@@ -36,7 +36,7 @@ a {
   box-sizing: border-box;
 }
 
-.redButton {
+.red-button {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   height: 40px;
@@ -49,14 +49,14 @@ a {
   border: none;
   box-shadow: 10px 10px 16px #b93d30, -10px -10px 16px #ff5b48;
 }
-.redButton:focus {
+.red-button:focus {
   outline: none;
 }
-.redButton:active {
+.red-button:active {
   box-shadow: inset 10px 10px 16px #b93d30, inset -10px -10px 16px #ff5b48 !important;
 }
 
-.blackButton {
+.black-button {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   height: 40px;
@@ -69,14 +69,14 @@ a {
   border: none;
   box-shadow: 10px 10px 16px #313131, -10px -10px 16px #494949;
 }
-.blackButton:focus {
+.black-button:focus {
   outline: none;
 }
-.blackButton:active {
+.black-button:active {
   box-shadow: inset 10px 10px 16px #313131, inset -10px -10px 16px #494949 !important;
 }
 
-.blackLine {
+.black-line {
   height: 6px;
   border-radius: 3px;
   background-color: #3d3d3d;

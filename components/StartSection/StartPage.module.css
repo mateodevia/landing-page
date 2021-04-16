@@ -1,43 +1,43 @@
-.startPageContainer {
+.container {
   position: relative;
   width: 100%;
   height: 100vh;
   background-color: var(--primary);
 }
 
-.startDescriptionConatainer {
+.start_description_container {
   width: 60%;
   height: 100vh;
 }
 
-.startDescriptionConatainer .textContainer {
+.start_description_container .text_container {
   margin: auto 0;
 }
 
-.startDescriptionConatainer h1 {
+.start_description_container h1 {
   color: white;
   width: calc(60vw - 80px);
   font-size: 72px;
   margin: 0;
 }
 
-.startDescriptionConatainer h3 {
+.start_description_container h3 {
   color: white;
   font-size: 24px;
   margin: 0;
 }
 
-.textContainer .line {
+.text_container .line {
   margin-top: 20px;
   width: 200px;
 }
 
-.startPagePhotoAndButtonsContainer {
+.photo_buttons_container {
   width: 40%;
   height: 100vh;
 }
 
-.startPagePhotoContainer {
+.photo_container {
   margin: 0 auto;
   margin-top: 30vh;
   width: 250px;
@@ -46,7 +46,7 @@
   background-color: var(--primary);
 }
 
-.startPagePhoto {
+.photo {
   opacity: 0;
   height: 230px;
   width: 230px;
@@ -55,7 +55,7 @@
   margin: auto;
 }
 
-.startPageCV {
+.cv {
   margin: 10px;
   margin-top: 40px;
   margin-left: auto;
@@ -63,7 +63,7 @@
   color: transparent;
 }
 
-.startPageLearnMore {
+.learn_more {
   margin: 10px;
   margin-top: 40px;
   margin-right: auto;
@@ -72,7 +72,7 @@
   background-color: var(--primary);
 }
 
-.startDescriptionConatainer .textContainer {
+.start_description_container .text_container {
   animation: move-text 1s forwards;
 }
 @keyframes move-text {
@@ -84,7 +84,7 @@
   }
 }
 
-.startPagePhotoContainer {
+.photo_container {
   animation: pupup-photo 1.5s forwards;
 }
 @keyframes pupup-photo {
@@ -99,7 +99,7 @@
   }
 }
 
-.startPagePhoto {
+.photo {
   animation: appear-photo 0.5s forwards;
   animation-delay: 1s;
   animation-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
@@ -113,7 +113,7 @@
   }
 }
 
-.startPageCV {
+.cv {
   animation: appear-button-red 0.5s forwards;
   animation-delay: 1.5s;
 }
@@ -128,7 +128,7 @@
   }
 }
 
-.startPageLearnMore {
+.learn_more {
   animation: appear-button-black 0.5s forwards;
   animation-delay: 2s;
 }
