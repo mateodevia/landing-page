@@ -11,24 +11,26 @@ const StartPage = (props) => {
           <div className={`${styles.line} black-line`} />
         </div>
       </div>
-      <div className={`${styles.photo_buttons_container}`}>
-        <div className={`${styles.photo_container} flexbox`}>
-          <img
-            src="https://mateodevia.com/media/miFoto.jpeg"
-            className={`${styles.photo}`}
-            alt="Myself"
-          ></img>
-        </div>
-        <div className="flexbox">
-          <button className={`${styles.cv} red-button`}>
-            Check my resume!
-          </button>
-          <button
-            className={`${styles.learn_more} black-button`}
-            onClick={props.handleLearnMoreButtonClick}
-          >
-            Learn more!
-          </button>
+      <div className={`${styles.photo_buttons_container} flexbox`}>
+        <div className={styles.horizontally_center}>
+          <div className={`${styles.photo_container} flexbox`}>
+            <img
+              src="https://mateodevia.com/media/miFoto.jpeg"
+              className={`${styles.photo}`}
+              alt="Myself"
+            ></img>
+          </div>
+          <div className={`${styles.buttons_container} flexbox`}>
+            <button className={`${styles.cv} red-button`}>
+              Check my resume!
+            </button>
+            <button
+              className={`${styles.learn_more} black-button`}
+              onClick={props.handleLearnMoreButtonClick}
+            >
+              Learn more!
+            </button>
+          </div>
         </div>
       </div>
     </div>

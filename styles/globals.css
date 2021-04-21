@@ -39,7 +39,8 @@ a {
 .red-button {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  height: 40px;
+  height: min-content;
+  min-height: 40px;
   color: white;
   border-radius: 20px;
   font-size: 16px;
@@ -59,7 +60,8 @@ a {
 .black-button {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  height: 40px;
+  height: min-content;
+  min-height: 40px;
   color: white;
   border-radius: 20px;
   font-size: 16px;

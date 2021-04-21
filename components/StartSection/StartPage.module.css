@@ -37,9 +37,13 @@
   height: 100vh;
 }
 
+.horizontally_center {
+  margin: auto 0;
+  width: 100%;
+}
+
 .photo_container {
   margin: 0 auto;
-  margin-top: 30vh;
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -53,6 +57,10 @@
   border-radius: 50%;
   background-color: white;
   margin: auto;
+}
+
+.buttons_container {
+  padding: 5px;
 }
 
 .cv {
@@ -82,6 +90,7 @@
   }
   100% {
     margin-left: 80px;
+    margin-right: 80px;
   }
 }
 
@@ -147,6 +156,10 @@
 }
 
 @media only screen and (max-width: 1000px) {
+  .start_description_container h1 {
+    width: 100%;
+    font-size: 50px;
+  }
   .container {
     display: block;
   }
@@ -172,16 +185,10 @@
   .start_description_container .text_container {
     width: 100%;
   }
-
-  .start_description_container h1 {
-    width: 90%;
-    font-size: 60px;
-  }
 }
 
 @media only screen and (max-width: 769px) {
   .start_description_container h1 {
-    width: 90%;
     font-size: 40px;
   }
   @keyframes move-text {
@@ -190,13 +197,13 @@
     }
     100% {
       margin-left: 40px;
+      margin-right: 40px;
     }
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 569px) {
   .start_description_container h1 {
-    width: 100%;
     font-size: 35px;
   }
 
@@ -211,6 +218,7 @@
     }
     100% {
       margin-left: 20px;
+      margin-right: 0px;
     }
   }
 }
