@@ -75,6 +75,7 @@
 .start_description_container .text_container {
   animation: move-text 1s forwards;
 }
+
 @keyframes move-text {
   0% {
     margin-left: 0px;
@@ -142,5 +143,74 @@
     color: white;
     background-color: #3d3d3d;
     box-shadow: 10px 10px 16px #b93d30, -10px -10px 16px #ff5b48;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    display: block;
+  }
+  .start_description_container {
+    width: 100%;
+    height: min-content;
+  }
+
+  .photo_buttons_container {
+    width: 100%;
+    height: min-content;
+  }
+
+  .photo_container {
+    display: none;
+  }
+
+  .start_description_container {
+    width: 100%;
+    height: calc(100vh - 120px);
+  }
+
+  .start_description_container .text_container {
+    width: 100%;
+  }
+
+  .start_description_container h1 {
+    width: 90%;
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .start_description_container h1 {
+    width: 90%;
+    font-size: 40px;
+  }
+  @keyframes move-text {
+    0% {
+      margin-left: 0px;
+    }
+    100% {
+      margin-left: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .start_description_container h1 {
+    width: 100%;
+    font-size: 35px;
+  }
+
+  .start_description_container h3 {
+    color: white;
+    font-size: 16px;
+    margin: 0;
+  }
+  @keyframes move-text {
+    0% {
+      margin-left: 0px;
+    }
+    100% {
+      margin-left: 20px;
+    }
   }
 }
