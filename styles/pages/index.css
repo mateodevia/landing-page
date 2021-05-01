@@ -17,3 +17,16 @@
   height: min-content;
   min-height: 100vh;
 }
+
+.sectionTittle {
+  opacity: 0;
+  text-align: center;
+  transform: translateY(40px);
+  transition: opacity 0.3s 0.3s ease-out, transform 0.3s 0.3s ease-out;
+  will-change: opacity, transform;
+}
+
+.sectionTittle.isVisible {
+  opacity: 1;
+  transform: none;
+}

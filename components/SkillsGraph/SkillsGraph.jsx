@@ -421,17 +421,33 @@ const data = {
 
 export default function ForceGraph() {
   const containerRef = useRef(null);
+
   useEffect(() => {
     let destroyFn;
 
     if (containerRef.current) {
-      const { destroy } = runForceGraph(
+      const { destroy, move } = runForceGraph(
         containerRef.current,
         data.links,
         data.nodes,
         nodeHoverTooltip
       );
       destroyFn = destroy;
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0,
+      };
+      const handleObserver = (entities) => {
+        const target = entities[0];
+        if (target.isIntersecting) {
+          move();
+        }
+      };
+      // initialize IntersectionObserver
+      // and attaching to Load More div
+      const observer = new IntersectionObserver(handleObserver, options);
+      observer.observe(containerRef.current);
     }
 
     return destroyFn;
@@ -441,5 +457,5 @@ export default function ForceGraph() {
     return `<div>${node.id}</div>`;
   }, []);
 
-  return <div ref={containerRef} className={styles.container} />;
+  return <div ref={containerRef} className={`${styles.container}`} />;
 }

@@ -14,6 +14,7 @@ export function runForceGraph(
   const containerRect = container.getBoundingClientRect();
   const height = containerRect.height;
   const width = containerRect.width;
+  const mobile = width < 769;
 
   const color = (d) => {
     return d.color;
@@ -86,7 +87,9 @@ export function runForceGraph(
     .force("charge", d3.forceManyBody())
     .force(
       "collision",
-      d3.forceCollide().radius((d) => d.size / 2 + 5)
+      d3
+        .forceCollide()
+        .radius((d) => (mobile ? (d.size * 0.8) / 2 + 8 : d.size / 2 + 5))
     )
     .force("center", d3.forceCenter(0, 0));
 
@@ -123,7 +126,9 @@ export function runForceGraph(
     .selectAll("circle")
     .data(nodes)
     .join("circle")
-    .attr("r", (d) => d.size / 2)
+    .attr("r", (d) => {
+      return mobile ? (d.size * 0.8) / 2 : d.size / 2;
+    })
     .attr("fill", color)
     .call(drag(simulation));
 
@@ -135,8 +140,8 @@ export function runForceGraph(
     .enter()
     .append("foreignObject");
   label
-    .attr("width", (d) => d.size)
-    .attr("height", (d) => d.size)
+    .attr("width", (d) => (mobile ? d.size * 0.8 : d.size))
+    .attr("height", (d) => (mobile ? d.size * 0.8 : d.size))
     .append("xhtml:div")
     .attr("class", `flexbox ${styles.subjectContainer}`)
     .html((d) => {
@@ -155,10 +160,10 @@ export function runForceGraph(
       return d.icon;
     })
     .attr("height", (d) => {
-      return d.size * 0.6;
+      return (mobile ? d.size * 0.8 : d.size) * 0.6;
     })
     .attr("width", (d) => {
-      return d.size * 0.6;
+      return (mobile ? d.size * 0.8 : d.size) * 0.6;
     })
     .call(drag(simulation));
 
@@ -170,33 +175,61 @@ export function runForceGraph(
       removeTooltip();
     });
 
+  const validateX = (d) => {
+    const lowerLimmit = -width / 2 + (mobile ? (d.size * 0.8) / 2 : d.size / 2);
+    const upperLimmit = width / 2 - (mobile ? (d.size * 0.8) / 2 : d.size / 2);
+    if (lowerLimmit < d.x && d.x < upperLimmit) {
+      return d.x;
+    } else {
+      return d.x > 0 ? upperLimmit : lowerLimmit;
+    }
+  };
+
+  const validateY = (d) => {
+    const lowerLimmit =
+      -height / 2 + (mobile ? (d.size * 0.8) / 2 : d.size / 2);
+    const upperLimmit = height / 2 - (mobile ? (d.size * 0.8) / 2 : d.size / 2);
+    if (lowerLimmit < d.y && d.y < upperLimmit) {
+      return d.y;
+    } else {
+      return d.y > 0 ? upperLimmit : lowerLimmit;
+    }
+  };
+
   simulation.on("tick", () => {
+    // update node positions
+    node.attr("cx", validateX).attr("cy", validateY);
     //update link positions
     link
-      .attr("x1", (d) => d.source.x)
-      .attr("y1", (d) => d.source.y)
-      .attr("x2", (d) => d.target.x)
-      .attr("y2", (d) => d.target.y);
-
-    // update node positions
-    node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+      .attr("x1", (d) => {
+        return validateX({ x: d.source.x, size: d.source.size });
+      })
+      .attr("y1", (d) => {
+        return validateY({ y: d.source.y, size: d.source.size });
+      })
+      .attr("x2", (d) => {
+        return validateX({ x: d.target.x, size: d.target.size });
+      })
+      .attr("y2", (d) => {
+        return validateY({ y: d.target.y, size: d.target.size });
+      });
 
     // update label positions
     label
       .attr("x", (d) => {
-        return d.x - d.size / 2;
+        return validateX(d) - (mobile ? (d.size * 0.8) / 2 : d.size / 2);
       })
       .attr("y", (d) => {
-        return d.y - d.size / 2;
+        return validateY(d) - (mobile ? (d.size * 0.8) / 2 : d.size / 2);
       });
 
     // update icon positions
     icon
       .attr("x", (d) => {
-        return d.x - (d.size * 0.6) / 2;
+        return validateX(d) - ((mobile ? d.size * 0.8 : d.size) * 0.6) / 2;
       })
       .attr("y", (d) => {
-        return d.y - (d.size * 0.6) / 2;
+        return validateY(d) - ((mobile ? d.size * 0.8 : d.size) * 0.6) / 2;
       });
   });
 
@@ -206,6 +239,10 @@ export function runForceGraph(
     },
     nodes: () => {
       return svg.node();
+    },
+    move: () => {
+      simulation.alpha(0.4);
+      simulation.restart();
     },
   };
 }
