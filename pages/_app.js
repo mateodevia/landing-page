@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles/globals.css";
 import "../styles/pages/index.css";
+import "../styles/components/ExperienceSection.css";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

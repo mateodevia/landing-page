@@ -10,7 +10,7 @@ const data = {
       color: "#5bd4a3",
       type: "subject",
       text: "White",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Back-end",
@@ -18,7 +18,7 @@ const data = {
       color: "#313699",
       type: "subject",
       text: "White",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Front-end",
@@ -26,7 +26,7 @@ const data = {
       color: "#f0a04a",
       type: "subject",
       text: "White",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Vue",
@@ -34,7 +34,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/vue.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "React",
@@ -42,7 +42,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/react.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "HTML",
@@ -50,7 +50,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/html.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "CSS",
@@ -58,7 +58,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/css.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "JavaScript",
@@ -66,7 +66,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/javascript.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Software architecture",
@@ -74,7 +74,7 @@ const data = {
       color: "#fcd303",
       type: "subject",
       text: "Black",
-      group: 2,
+      cluster: 2,
     },
     {
       id: "Testing",
@@ -82,7 +82,7 @@ const data = {
       color: "#e8314c",
       type: "subject",
       text: "White",
-      group: 2,
+      cluster: 2,
     },
     {
       id: "UX",
@@ -90,7 +90,7 @@ const data = {
       color: "#9d24ad",
       type: "subject",
       text: "White",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "UI",
@@ -98,7 +98,7 @@ const data = {
       color: "#e831a2",
       type: "subject",
       text: "White",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "NextJS",
@@ -106,7 +106,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/nextjs.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Cloud computing",
@@ -114,7 +114,7 @@ const data = {
       color: "#73a9f5",
       type: "subject",
       text: "White",
-      group: 2,
+      cluster: 2,
     },
     {
       id: "AWS",
@@ -122,7 +122,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/aws.svg",
-      group: 2,
+      cluster: 2,
     },
     {
       id: "Node JS",
@@ -130,7 +130,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/nodejs.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Django",
@@ -138,7 +138,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/django.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Mongo",
@@ -146,7 +146,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/mongo.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "PostgreSQL",
@@ -154,7 +154,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/postgresql.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Python",
@@ -162,7 +162,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/python.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Rabbit MQ",
@@ -170,7 +170,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/rabbitmq.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Circle CI",
@@ -178,7 +178,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/circleci.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Cypress",
@@ -186,7 +186,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/cypress.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Firebase",
@@ -194,7 +194,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/firebase.svg",
-      group: 2,
+      cluster: 2,
     },
     {
       id: "GitHub",
@@ -202,7 +202,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/github.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Heroku",
@@ -210,7 +210,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/heroku.svg",
-      group: 2,
+      cluster: 2,
     },
     {
       id: "Java",
@@ -218,7 +218,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/java.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "TypeScript",
@@ -226,7 +226,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/typescript.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "GraphQL",
@@ -234,7 +234,7 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/graphql.svg",
-      group: 1,
+      cluster: 1,
     },
     {
       id: "Mocha",
@@ -242,24 +242,24 @@ const data = {
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/mocha.svg",
-      group: 1,
+      cluster: 1,
     },
   ],
   links: [
     {
       source: "Web development",
       target: "Front-end",
-      value: 200,
+      value: 120,
     },
     {
       source: "Web development",
       target: "Back-end",
-      value: 200,
+      value: 120,
     },
     {
       source: "Testing",
       target: "Web development",
-      value: 200,
+      value: 120,
     },
     {
       source: "React",
@@ -309,17 +309,17 @@ const data = {
     {
       source: "Software architecture",
       target: "Web development",
-      value: 100,
+      value: 80,
     },
     {
       source: "Software architecture",
       target: "Cloud computing",
-      value: 100,
+      value: 80,
     },
     {
       source: "Web development",
       target: "Cloud computing",
-      value: 100,
+      value: 80,
     },
     {
       source: "Software architecture",
@@ -430,7 +430,9 @@ export default function ForceGraph() {
         containerRef.current,
         data.links,
         data.nodes,
-        nodeHoverTooltip
+        nodeHoverTooltip,
+        769,
+        576
       );
       destroyFn = destroy;
       const options = {
@@ -457,5 +459,9 @@ export default function ForceGraph() {
     return `<div>${node.id}</div>`;
   }, []);
 
-  return <div ref={containerRef} className={`${styles.container}`} />;
+  return (
+    <div className={`${styles.wrapper}`}>
+      <div ref={containerRef} className={`${styles.container}`} />
+    </div>
+  );
 }

@@ -1,0 +1,25 @@
+.element_title {
+  color: black;
+}
+
+.element_subtitle {
+  color: black;
+}
+
+.element_description {
+  color: black;
+}
+
+.element_icon_container {
+  height: 100%;
+}
+
+.element_icon {
+  width: 50%;
+  margin: auto;
+}
+
+.date {
+  color: black;
+  font-family: "Poppins", sans-serif;
+}

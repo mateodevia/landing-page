@@ -1,5 +1,11 @@
+.wrapper {
+  width: 100%;
+  overflow-x: scroll;
+}
+
 .container {
   width: 100%;
+  min-width: 450px;
   height: 700px;
   position: relative;
 }

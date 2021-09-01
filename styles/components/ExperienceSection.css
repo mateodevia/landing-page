@@ -1,0 +1,11 @@
+.vertical-timeline {
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.vertical-timeline::before {
+  background: white !important;
+  box-shadow: 6px 6px 8px #d0d0d0, -6px -6px 8px #ffffff;
+  border-radius: 3px;
+}

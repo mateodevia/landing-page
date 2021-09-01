@@ -1,3 +1,8 @@
+.normalScroll {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 .home-page-container {
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
@@ -15,7 +20,6 @@
 
 .skills-section {
   height: min-content;
-  min-height: 100vh;
 }
 
 .sectionTittle {

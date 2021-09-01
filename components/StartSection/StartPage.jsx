@@ -15,9 +15,9 @@ const StartPage = (props) => {
         <div className={styles.horizontally_center}>
           <div className={`${styles.photo_container} flexbox`}>
             <img
-              src="https://mateodevia.com/media/miFoto.jpeg"
+              src='/avatar.jpeg'
               className={`${styles.photo}`}
-              alt="Myself"
+              alt='Myself'
             ></img>
           </div>
           <div className={`${styles.buttons_container} flexbox`}>

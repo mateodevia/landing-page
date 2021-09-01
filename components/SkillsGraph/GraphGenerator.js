@@ -6,7 +6,9 @@ export function runForceGraph(
   container,
   linksData,
   nodesData,
-  nodeHoverTooltip
+  nodeHoverTooltip,
+  mediumBreakPoint,
+  smallBreakpoint
 ) {
   const links = linksData.map((d) => Object.assign({}, d));
   const nodes = nodesData.map((d) => Object.assign({}, d));
@@ -14,7 +16,8 @@ export function runForceGraph(
   const containerRect = container.getBoundingClientRect();
   const height = containerRect.height;
   const width = containerRect.width;
-  const mobile = width < 769;
+  const medium = smallBreakpoint < width && width < mediumBreakPoint;
+  const small = width < smallBreakpoint;
 
   const color = (d) => {
     return d.color;
@@ -22,6 +25,38 @@ export function runForceGraph(
 
   const getClass = (d) => {
     return styles["text" + d.text];
+  };
+
+  const getRadius = (d) => {
+    let resizeFactor = 1;
+    if (medium) {
+      resizeFactor = 0.8;
+    } else if (small) {
+      resizeFactor = 0.7;
+    }
+    return (d.size * resizeFactor) / 2;
+  };
+
+  const getDistance = (l) => {
+    const circleSpace = getRadius(l.source) + getRadius(l.target);
+
+    let resizeFactor = 1;
+    if (medium) {
+      resizeFactor = 0.8;
+    } else if (small) {
+      resizeFactor = 0.2;
+    }
+    return l.value * resizeFactor + circleSpace;
+  };
+
+  const getCollision = (d) => {
+    let extraSpace = 5;
+    if (medium) {
+      extraSpace = 10;
+    } else if (small) {
+      extraSpace = 12;
+    }
+    return getRadius(d) + extraSpace;
   };
 
   const drag = (simulation) => {
@@ -82,26 +117,22 @@ export function runForceGraph(
         .forceLink(links)
         .id((d) => d.id)
         .strength(3)
-        .distance((d) => d.value + d.source.size / 2)
+        .distance(getDistance)
     )
     .force("charge", d3.forceManyBody())
-    .force(
-      "collision",
-      d3
-        .forceCollide()
-        .radius((d) => (mobile ? (d.size * 0.8) / 2 + 8 : d.size / 2 + 5))
-    )
+    .force("collision", d3.forceCollide().radius(getCollision))
     .force("center", d3.forceCenter(0, 0));
 
   const clusters = {
-    1: 0,
-    2: width,
+    0: 0,
+    1: -width / 2,
+    2: width / 2,
   };
 
   simulation.force(
     "x",
     d3.forceX().x(function (d) {
-      return clusters[d.group];
+      return clusters[d.cluster];
     })
   );
 
@@ -126,9 +157,7 @@ export function runForceGraph(
     .selectAll("circle")
     .data(nodes)
     .join("circle")
-    .attr("r", (d) => {
-      return mobile ? (d.size * 0.8) / 2 : d.size / 2;
-    })
+    .attr("r", getRadius)
     .attr("fill", color)
     .call(drag(simulation));
 
@@ -140,8 +169,8 @@ export function runForceGraph(
     .enter()
     .append("foreignObject");
   label
-    .attr("width", (d) => (mobile ? d.size * 0.8 : d.size))
-    .attr("height", (d) => (mobile ? d.size * 0.8 : d.size))
+    .attr("width", (d) => getRadius(d) * 2)
+    .attr("height", (d) => getRadius(d) * 2)
     .append("xhtml:div")
     .attr("class", `flexbox ${styles.subjectContainer}`)
     .html((d) => {
@@ -160,10 +189,10 @@ export function runForceGraph(
       return d.icon;
     })
     .attr("height", (d) => {
-      return (mobile ? d.size * 0.8 : d.size) * 0.6;
+      return getRadius(d) * 2 * 0.6;
     })
     .attr("width", (d) => {
-      return (mobile ? d.size * 0.8 : d.size) * 0.6;
+      return getRadius(d) * 2 * 0.6;
     })
     .call(drag(simulation));
 
@@ -176,8 +205,8 @@ export function runForceGraph(
     });
 
   const validateX = (d) => {
-    const lowerLimmit = -width / 2 + (mobile ? (d.size * 0.8) / 2 : d.size / 2);
-    const upperLimmit = width / 2 - (mobile ? (d.size * 0.8) / 2 : d.size / 2);
+    const lowerLimmit = -width / 2 + getRadius(d);
+    const upperLimmit = width / 2 - getRadius(d);
     if (lowerLimmit < d.x && d.x < upperLimmit) {
       return d.x;
     } else {
@@ -186,9 +215,8 @@ export function runForceGraph(
   };
 
   const validateY = (d) => {
-    const lowerLimmit =
-      -height / 2 + (mobile ? (d.size * 0.8) / 2 : d.size / 2);
-    const upperLimmit = height / 2 - (mobile ? (d.size * 0.8) / 2 : d.size / 2);
+    const lowerLimmit = -height / 2 + getRadius(d);
+    const upperLimmit = height / 2 - getRadius(d);
     if (lowerLimmit < d.y && d.y < upperLimmit) {
       return d.y;
     } else {
@@ -217,19 +245,19 @@ export function runForceGraph(
     // update label positions
     label
       .attr("x", (d) => {
-        return validateX(d) - (mobile ? (d.size * 0.8) / 2 : d.size / 2);
+        return validateX(d) - getRadius(d);
       })
       .attr("y", (d) => {
-        return validateY(d) - (mobile ? (d.size * 0.8) / 2 : d.size / 2);
+        return validateY(d) - getRadius(d);
       });
 
     // update icon positions
     icon
       .attr("x", (d) => {
-        return validateX(d) - ((mobile ? d.size * 0.8 : d.size) * 0.6) / 2;
+        return validateX(d) - getRadius(d) * 0.6;
       })
       .attr("y", (d) => {
-        return validateY(d) - ((mobile ? d.size * 0.8 : d.size) * 0.6) / 2;
+        return validateY(d) - getRadius(d) * 0.6;
       });
   });
 
