@@ -43,6 +43,7 @@ div.tooltip {
 
 .subjectContainer {
   height: 100%;
+  cursor: grab;
 }
 
 .subjectLabel {

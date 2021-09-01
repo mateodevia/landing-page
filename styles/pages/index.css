@@ -20,10 +20,12 @@
 
 .skills-section {
   height: min-content;
+  background-color: white;
 }
 
 .sectionTittle {
   opacity: 0;
+  margin-top: 15px;
   text-align: center;
   transform: translateY(40px);
   transition: opacity 0.3s 0.3s ease-out, transform 0.3s 0.3s ease-out;
@@ -33,4 +35,12 @@
 .sectionTittle.isVisible {
   opacity: 1;
   transform: none;
+}
+
+.skills-node {
+  cursor: grab;
+}
+
+.skills-icon {
+  cursor: grab;
 }
