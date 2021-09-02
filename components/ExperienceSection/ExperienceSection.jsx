@@ -8,7 +8,7 @@ import styles from "./ExperienceSection.module.css";
 const experiences = [
   {
     title: "Backend Developer",
-    subTitle: "Tyba",
+    subTitle: "tyba",
     description:
       "Full time job as backend developer for a Fintech app used by thousands of users",
     date: "2020 - present",

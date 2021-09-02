@@ -23,13 +23,22 @@
   background-color: white;
 }
 
+.footer-section {
+  height: fit-content;
+  background-color: var(--secondary);
+}
+
 .sectionTittle {
   opacity: 0;
-  margin-top: 15px;
+  padding-top: 15px;
   text-align: center;
   transform: translateY(40px);
   transition: opacity 0.3s 0.3s ease-out, transform 0.3s 0.3s ease-out;
   will-change: opacity, transform;
+}
+
+.sectionTitleWhite {
+  color: white;
 }
 
 .sectionTittle.isVisible {
