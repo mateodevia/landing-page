@@ -92,6 +92,27 @@ a {
   box-shadow: inset 10px 10px 16px #313131, inset -10px -10px 16px #494949 !important;
 }
 
+.white-button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  height: min-content;
+  min-height: 40px;
+  color: var(--primary);
+  border-radius: 20px;
+  font-size: 16px;
+  padding: 3px 28px;
+  cursor: pointer;
+  background-color: var(--background);
+  border: none;
+  box-shadow: 6px 6px 8px #d0d0d0, -6px -6px 8px #ffffff;
+}
+.white-button:focus {
+  outline: none;
+}
+.white-button:active {
+  box-shadow: inset 6px 6px 8px #d0d0d0, inset -6px -6px 8px #ffffff;
+}
+
 .black-line {
   height: 6px;
   border-radius: 3px;

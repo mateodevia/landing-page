@@ -110,6 +110,11 @@ const ExperienceSection = () => (
         <p className={`${styles.element_description}`}>
           {experience.description}
         </p>
+        <div>
+          <button className={`${styles.learnMoreButton} white-button`}>
+            Learn More
+          </button>
+        </div>
       </VerticalTimelineElement>
     ))}
   </VerticalTimeline>
