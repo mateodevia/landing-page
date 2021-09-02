@@ -154,7 +154,7 @@ export function runForceGraph(
     .append("g")
     .attr("stroke", "#fff")
     .attr("stroke-width", 2)
-    .attr("class", "skills-node")
+    .attr("class", styles.skillsNode)
     .selectAll("circle")
     .data(nodes)
     .join("circle")
@@ -180,7 +180,7 @@ export function runForceGraph(
 
   const icon = svg
     .append("g")
-    .attr("class", "skills-icon")
+    .attr("class", styles.skillsIcon)
     .selectAll("text")
     .data(nodes.filter((n) => n.type === "tool"))
     .enter()
