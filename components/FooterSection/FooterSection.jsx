@@ -12,9 +12,9 @@ const socialMedia = [
     altText: "GitHub logo",
   },
   {
-    link: "https://wa.me/573132803320",
+    link: "mailto:mateodevia2@hotmail.com",
     icon: "/SocialMedia/email.svg",
-    altText: "Whatsapp logo",
+    altText: "Email logo",
   },
   {
     link: "https://wa.me/573132803320",
