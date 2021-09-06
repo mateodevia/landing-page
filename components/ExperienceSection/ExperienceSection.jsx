@@ -79,8 +79,9 @@ const experiences = [
 
 const ExperienceSection = () => (
   <VerticalTimeline>
-    {experiences.map((experience) => (
+    {experiences.map((experience, i) => (
       <VerticalTimelineElement
+        key={i}
         icon={
           <a
             href={experience.url}

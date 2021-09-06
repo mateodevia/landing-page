@@ -9,12 +9,12 @@ import ReactFullpage from "@fullpage/react-fullpage";
 export default function Home() {
   return (
     <ReactFullpage
-      licenseKey={"YOUR_KEY_HERE"}
       scrollingSpeed={1000}
       scrollOverflow={true}
       scrollOverflowOptions={{
         scrollbars: false,
       }}
+      anchors={["home", "skills", "experience"]}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
@@ -25,7 +25,11 @@ export default function Home() {
               </Head>
               <div className='section'>
                 <section className='scroll-snap-section'>
-                  <StartSection handleLearnMoreButtonClick={() => {}} />
+                  <StartSection
+                    handleLearnMoreButtonClick={() =>
+                      fullpageApi.moveSectionDown()
+                    }
+                  />
                 </section>
               </div>
               <div className='section'>
