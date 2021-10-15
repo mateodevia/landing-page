@@ -222,7 +222,7 @@ const data = {
     },
     {
       id: "TypeScript",
-      size: 40,
+      size: 80,
       color: "#f5f5f5",
       type: "tool",
       icon: "/SkillsGraph/typescript.svg",
