@@ -5,6 +5,7 @@ import ExperienceSection from "../components/ExperienceSection/ExperienceSection
 import React from "react";
 import FooterSection from "../components/FooterSection/FooterSection";
 import ReactFullpage from "@fullpage/react-fullpage";
+import CertificationsSection from "../components/CertificationsSection/CertificationsSection";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       scrollOverflowOptions={{
         scrollbars: false,
       }}
-      anchors={["home", "skills", "experience"]}
+      anchors={["home", "skills", "experience", "certifications"]}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
@@ -44,6 +45,14 @@ export default function Home() {
                     My Experience
                   </h1>
                   <ExperienceSection />
+                </section>
+              </div>
+              <div className='section'>
+                <section className='certifications-section'>
+                  <h1 className='sectionTitleWhite selectOnScroll sectionTittle'>
+                    My certifications
+                  </h1>
+                  <CertificationsSection />
                 </section>
                 <section className='footer-section'>
                   <h1 className='sectionTitleWhite selectOnScroll sectionTittle'>
