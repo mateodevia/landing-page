@@ -1,9 +1,15 @@
 import React, { useEffect } from "react";
+import { useRouter } from "next/router";
+import * as locales from "../lang";
 import "../styles/globals.css";
 import "../styles/pages/index.css";
 import "../styles/components/ExperienceSection.css";
+import { IntlProvider } from "react-intl";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  const { locale, defaultLocale, pathname } = router;
+
   useEffect(() => {
     const scroll =
       window.requestAnimationFrame ||
@@ -38,7 +44,22 @@ function MyApp({ Component, pageProps }) {
     }
     loop();
   }, []);
-  return <Component {...pageProps} />;
+
+  const localeCopy = locales[locale];
+  const messages = Object.assign(
+    { ...localeCopy["global"] },
+    localeCopy[pathname]
+  );
+
+  return (
+    <IntlProvider
+      locale={locale}
+      defaultLocale={defaultLocale}
+      messages={messages}
+    >
+      <Component {...pageProps} />
+    </IntlProvider>
+  );
 }
 
 export default MyApp;

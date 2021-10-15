@@ -1,13 +1,17 @@
 import React from "react";
+import { useIntl } from "react-intl";
 import styles from "./StartPage.module.css";
 
 const StartPage = (props) => {
+  const { formatMessage } = useIntl();
+  const trans = (id) => formatMessage({ id });
+
   return (
     <div className={`${styles.container} flexbox`}>
       <div className={`${styles.start_description_container} flexbox`}>
         <div className={`${styles.text_container}`}>
           <h3>Mateo Devia Vega</h3>
-          <h1>Systems and Computing Engineer, and Developer</h1>
+          <h1>{trans("mainTitle")}</h1>
           <div className={`${styles.line} black-line`} />
         </div>
       </div>
@@ -22,13 +26,13 @@ const StartPage = (props) => {
           </div>
           <div className={`${styles.buttons_container} flexbox`}>
             <button className={`${styles.cv} red-button`}>
-              Check my resume!
+              {trans("myResume")}
             </button>
             <button
               className={`${styles.learn_more} black-button`}
               onClick={props.handleLearnMoreButtonClick}
             >
-              Learn more!
+              {trans("learnMore")}
             </button>
           </div>
         </div>
