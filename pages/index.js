@@ -2,14 +2,21 @@ import Head from "next/head";
 import StartSection from "../components/StartSection/StartPage";
 import SkillsGraph from "../components/SkillsGraph/SkillsGraph";
 import ExperienceSection from "../components/ExperienceSection/ExperienceSection";
-import React from "react";
+import React, { useRef } from "react";
 import FooterSection from "../components/FooterSection/FooterSection";
 import { useIntl } from "react-intl";
 import CertificationsSection from "../components/CertificationsSection/CertificationsSection";
 
 export default function Home() {
+  const skillsRef = useRef();
+
   const { formatMessage } = useIntl();
   const trans = (id) => formatMessage({ id });
+
+  const scrollTo = () => {
+    skillsRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <React.Fragment>
       <Head>
@@ -17,11 +24,9 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <section className=''>
-        <StartSection
-          handleLearnMoreButtonClick={() => fullpageApi.moveSectionDown()}
-        />
+        <StartSection handleLearnMoreButtonClick={scrollTo} />
       </section>
-      <section className='skills-section'>
+      <section ref={skillsRef} className='skills-section'>
         <h1 className='selectOnScroll sectionTittle'>{trans("mySkills")}</h1>
         <SkillsGraph />
       </section>
