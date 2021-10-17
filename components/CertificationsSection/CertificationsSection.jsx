@@ -85,8 +85,6 @@ const CertificationsSection = () => {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
-        animateTransitions={true}
-        displaySameSlide={false}
       >
         {tutorialSteps.map((step, index) => (
           <div key={step.label}>
