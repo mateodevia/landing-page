@@ -7,6 +7,7 @@ export const en = {
     //   Home
     mainTitle: "Systems and Computing Engineer, and Developer",
     myResume: "Check my resume!",
+    resumeLink: "/files/CV Mateo Devia.pdf",
     //   Skills
     mySkills: "My Skills",
     //   Experience

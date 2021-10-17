@@ -26,7 +26,9 @@ const StartPage = (props) => {
           </div>
           <div className={`${styles.buttons_container} flexbox`}>
             <button className={`${styles.cv} red-button`}>
-              {trans("myResume")}
+              <a href={trans("resumeLink")} target='_blank'>
+                {trans("myResume")}
+              </a>
             </button>
             <button
               className={`${styles.learn_more} black-button`}
