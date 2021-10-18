@@ -1,0 +1,18 @@
+.closeIcon {
+  height: 12px;
+  width: 12px;
+  margin-left: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.dialogTitle {
+  margin: 0 30px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.dialogSubTitle {
+  text-align: center;
+  font-size: 16px;
+}
