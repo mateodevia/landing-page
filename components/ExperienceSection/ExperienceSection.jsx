@@ -106,57 +106,61 @@ const ExperienceSection = () => {
       >
         {selectedExperience?.detailComponent}
       </CustomDialog>
-      <VerticalTimeline>
-        {experiences.map((experience, i) => (
-          <VerticalTimelineElement
-            key={i}
-            icon={
-              <a
-                href={experience.url}
-                target='_blank'
-                className={`${styles.element_icon_container} flexbox`}
-              >
-                <img className={styles.element_icon} src={experience.icon} />
-              </a>
-            }
-            contentStyle={{
-              backgroundColor: "var(--background)",
-              color: "#fff",
-              borderRadius: "20px",
-              boxShadow: "8px 8px 16px #d0d0d0, -8px -8px 16px #ffffff",
-            }}
-            iconStyle={{
-              backgroundColor: experience.color,
-              border: "3px solid white",
-              boxShadow: "6px 6px 12px #d0d0d0",
-            }}
-            contentArrowStyle={{ borderRight: "7px solid  var(--background)" }}
-            date={experience.date}
-            dateClassName={styles.date}
-          >
-            <h3 className={`${styles.element_title}`}>{experience.title}</h3>
-            <h4 className={`${styles.element_subtitle}`}>
-              {experience.subTitle}
-            </h4>
-            <p className={`${styles.element_description}`}>
-              {experience.description}
-            </p>
-            {experience.showDetail && (
-              <div>
-                <button
-                  onClick={() => {
-                    setDetailDialog(true);
-                    setSelectedExperience(experience);
-                  }}
-                  className={`${styles.learnMoreButton} white-button`}
+      <div className={styles.timeline_container}>
+        <VerticalTimeline>
+          {experiences.map((experience, i) => (
+            <VerticalTimelineElement
+              key={i}
+              icon={
+                <a
+                  href={experience.url}
+                  target='_blank'
+                  className={`${styles.element_icon_container} flexbox`}
                 >
-                  {trans("learnMore")}
-                </button>
-              </div>
-            )}
-          </VerticalTimelineElement>
-        ))}
-      </VerticalTimeline>
+                  <img className={styles.element_icon} src={experience.icon} />
+                </a>
+              }
+              contentStyle={{
+                backgroundColor: "var(--background)",
+                color: "#fff",
+                borderRadius: "20px",
+                boxShadow: "8px 8px 16px #d0d0d0, -8px -8px 16px #ffffff",
+              }}
+              iconStyle={{
+                backgroundColor: experience.color,
+                border: "3px solid white",
+                boxShadow: "6px 6px 12px #d0d0d0",
+              }}
+              contentArrowStyle={{
+                borderRight: "7px solid  var(--background)",
+              }}
+              date={experience.date}
+              dateClassName={styles.date}
+            >
+              <h3 className={`${styles.element_title}`}>{experience.title}</h3>
+              <h4 className={`${styles.element_subtitle}`}>
+                {experience.subTitle}
+              </h4>
+              <p className={`${styles.element_description}`}>
+                {experience.description}
+              </p>
+              {experience.showDetail && (
+                <div>
+                  <button
+                    onClick={() => {
+                      setDetailDialog(true);
+                      setSelectedExperience(experience);
+                    }}
+                    className={`${styles.learnMoreButton} white-button`}
+                  >
+                    {trans("learnMore")}
+                  </button>
+                </div>
+              )}
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
+      </div>
     </React.Fragment>
   );
 };
