@@ -8,6 +8,7 @@ import styles from "./ExperienceSection.module.css";
 import React from "react";
 import CustomDialog from "../shared/CustomDialog/CustomDialog";
 import { useState } from "react";
+import TybaDetail from "./Details/TybaDetail";
 
 const ExperienceSection = () => {
   const [detailDialog, setDetailDialog] = useState(false);
@@ -24,6 +25,8 @@ const ExperienceSection = () => {
       color: "#ffffff",
       icon: "/ExperienceSection/tyba.png",
       url: "https://tyba.com.co/",
+      showDetail: true,
+      detailComponent: <TybaDetail />,
     },
     {
       title: trans("inalambriaRole"),
@@ -33,6 +36,8 @@ const ExperienceSection = () => {
       color: "#0055EC",
       icon: "/ExperienceSection/Inalambria.png",
       url: "https://www.inalambria.com/",
+      showDetail: false,
+      detailComponent: <div>Holii</div>,
     },
     {
       title: trans("cumLaudeTitle"),
@@ -42,6 +47,8 @@ const ExperienceSection = () => {
       color: "#fff200",
       icon: "/ExperienceSection/Uniandes.png",
       url: "https://uniandes.edu.co/en",
+      showDetail: false,
+      detailComponent: <div>Holii</div>,
     },
     {
       title: trans("sincoFreelance"),
@@ -51,6 +58,8 @@ const ExperienceSection = () => {
       color: "#0c4270",
       icon: "/ExperienceSection/Sincosoft.png",
       url: "https://www.sinco.com.co/",
+      showDetail: false,
+      detailComponent: <div>Holii</div>,
     },
     {
       title: trans("cupi2Title"),
@@ -60,6 +69,8 @@ const ExperienceSection = () => {
       color: "#fff200",
       icon: "/ExperienceSection/Uniandes.png",
       url: "https://uniandes.edu.co/en",
+      showDetail: false,
+      detailComponent: <div>Holii</div>,
     },
     {
       title: trans("arquisoftTitle"),
@@ -69,6 +80,8 @@ const ExperienceSection = () => {
       color: "#fff200",
       icon: "/ExperienceSection/Uniandes.png",
       url: "https://uniandes.edu.co/en",
+      showDetail: false,
+      detailComponent: <div>Holii</div>,
     },
     {
       title: trans("highSchoolGraduation"),
@@ -78,6 +91,8 @@ const ExperienceSection = () => {
       color: "#131230",
       icon: "/ExperienceSection/Rochester School.png",
       url: "https://rochester.edu.co/",
+      showDetail: false,
+      detailComponent: <div>Holii</div>,
     },
   ];
 
@@ -88,7 +103,9 @@ const ExperienceSection = () => {
         subTitle={selectedExperience?.subTitle}
         onClose={() => setDetailDialog(false)}
         open={detailDialog}
-      />
+      >
+        {selectedExperience?.detailComponent}
+      </CustomDialog>
       <VerticalTimeline>
         {experiences.map((experience, i) => (
           <VerticalTimelineElement
@@ -124,17 +141,19 @@ const ExperienceSection = () => {
             <p className={`${styles.element_description}`}>
               {experience.description}
             </p>
-            <div>
-              <button
-                onClick={() => {
-                  setDetailDialog(true);
-                  setSelectedExperience(experience);
-                }}
-                className={`${styles.learnMoreButton} white-button`}
-              >
-                {trans("learnMore")}
-              </button>
-            </div>
+            {experience.showDetail && (
+              <div>
+                <button
+                  onClick={() => {
+                    setDetailDialog(true);
+                    setSelectedExperience(experience);
+                  }}
+                  className={`${styles.learnMoreButton} white-button`}
+                >
+                  {trans("learnMore")}
+                </button>
+              </div>
+            )}
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>

@@ -44,6 +44,17 @@ a {
   text-decoration: none;
 }
 
+.link {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary);
+  font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .flexbox {
   display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */

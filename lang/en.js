@@ -12,9 +12,16 @@ export const en = {
     mySkills: "My Skills",
     //   Experience
     myExperience: "My Experience",
+    responsibilities: "Responsabilities",
     tybaRole: "Backend Engineer",
     tybaDescription:
       "Full time job as backend developer for a Fintech app used by thousands of users",
+    tybaLongDescription:
+      "I am currently working as a backend engineer in tyba, a Fintech startup that provides various investment and financial services to their users through innovative tech solutions.",
+    tybaResponsibilities: `- Design and implementation of new features in the app
+- Continuous refactoring of software components
+- Support and bug fixing`,
+    tybaPage: "tyba´s home page",
     inalambriaRole: "Innovation Fullstack Developer",
     inalambriaDescription:
       "Full time job. Web development, product design, software design.",
