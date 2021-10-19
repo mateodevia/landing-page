@@ -26,7 +26,6 @@
 }
 
 .certifications-section {
-  height: 100vh;
   background-color: var(--primary);
   display: flex;
   flex-direction: column;
