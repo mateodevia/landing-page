@@ -22,9 +22,16 @@ export const es = {
 - Mejoramiento continuo de los componentes de software
 - Soporte y solución de bugs en la app`,
     tybaPage: "Página de tyba",
-    inalambriaRole: "Ingeniero fulstack de innovación",
+    inalambriaRole: "Ingeniero fullstack de innovación",
     inalambriaDescription:
       "Ingeniero del área de innovación encargado del diseño, concepción, e implementación de nuevos productos para la empresa.",
+    inalambriaLongDescription:
+      "Mi primer trabajo tiempo completo fue en Inalambria, una empresa dedicada a la mensajería instantanea. Fuí parte del equipo de Innovación, donde tuve la oportunidad de diseñar y desarrollar nuevos productos de software para la empresa.",
+    inalambriaResponsabilities: `- Diseño y desarrollo de nuevos productos de software
+- Implementación del ambiente de CI/CD
+- Diseño de arquitecturas para productos altamente escalables
+- Mantenimiento de productos en AWS`,
+    inalambriaPage: "Inalambria´s home page",
     cumLaudeTitle: "Grado Cum Laude",
     cumLaudeDescription:
       "Grado Cum Laude en Ingeniería de Sistemas y Computación con promedio dentro del 3% más alto en los últimos 5 años de la facultad de ingeniería",

@@ -32,6 +32,10 @@ const tutorialSteps = [
     imgPath: "Certifications/Fundamentos Prácticos de Machine Learning.png",
   },
   {
+    label: "Git and Github Introduction Course",
+    imgPath: "Certifications/Github Introduction Course.png",
+  },
+  {
     label: "Portfolio and CV creation Course Diploma",
     imgPath: "Certifications/Creación de Portafolio y CV.png",
   },

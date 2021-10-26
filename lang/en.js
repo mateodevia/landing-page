@@ -25,6 +25,13 @@ export const en = {
     inalambriaRole: "Innovation Fullstack Developer",
     inalambriaDescription:
       "Full time job. Web development, product design, software design.",
+    inalambriaLongDescription:
+      "My first fulltime job was at Inalambria, a tech company of instant messaging. I was part of the innovation team, where I participated in the design and implementation of new software products for the company.",
+    inalambriaResponsabilities: `- Product design and development
+- Implementing the CI/CD environment for the innovation team
+- Planing architecture for hightly scalable products
+- AWS maintainance`,
+    inalambriaPage: "Inalambria´s home page",
     cumLaudeTitle: "Cum Laude Bachelor Degree",
     cumLaudeDescription:
       "B.S. in Systems and Computing Engineering. Graduted with a GPA within the highest 3% in the last 5 years.",

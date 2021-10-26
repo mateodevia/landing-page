@@ -1,0 +1,49 @@
+.mainContainer {
+  display: flex;
+}
+
+.imageContainer {
+  width: 250px;
+  padding: 20px;
+}
+
+.image {
+  width: 100%;
+}
+
+.textContainer {
+  width: 200px;
+}
+
+.link {
+  display: flex;
+}
+
+.linkIcon {
+  margin: 3px 4px;
+  height: 14px;
+  filter: invert(32%) sepia(82%) saturate(972%) hue-rotate(330deg)
+    brightness(107%) contrast(92%);
+}
+
+.responsabilitiesTitle {
+  margin: 10px 0 0 0;
+}
+
+.responsabilities {
+  white-space: pre-wrap;
+}
+
+@media only screen and (max-width: 570px) {
+  .mainContainer {
+    display: inline-block;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .textContainer {
+    width: 100%;
+  }
+}

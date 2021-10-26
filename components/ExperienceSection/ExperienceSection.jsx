@@ -10,6 +10,7 @@ import CustomDialog from "../shared/CustomDialog/CustomDialog";
 import { useState } from "react";
 import TybaDetail from "./Details/TybaDetail/TybaDetail";
 import CumLaudeDetail from "./Details/CumLaudeDetail/CumLaudeDetail";
+import InalambriaDetail from "./Details/InalambriaDetail/InalambriaDetail";
 
 const ExperienceSection = () => {
   const [detailDialog, setDetailDialog] = useState(false);
@@ -22,7 +23,7 @@ const ExperienceSection = () => {
       title: trans("tybaRole"),
       subTitle: "tyba",
       description: trans("tybaDescription"),
-      date: `2020 - ${trans("present")}`,
+      date: `2021 - ${trans("present")}`,
       color: "#ffffff",
       icon: "/ExperienceSection/tyba.png",
       url: "https://tyba.com.co/",
@@ -37,8 +38,8 @@ const ExperienceSection = () => {
       color: "#0055EC",
       icon: "/ExperienceSection/Inalambria.png",
       url: "https://www.inalambria.com/",
-      showDetail: false,
-      detailComponent: <div>Holii</div>,
+      showDetail: true,
+      detailComponent: <InalambriaDetail />,
     },
     {
       title: trans("cumLaudeTitle"),
