@@ -28,6 +28,8 @@ export const es = {
     cumLaudeTitle: "Grado Cum Laude",
     cumLaudeDescription:
       "Grado Cum Laude en Ingeniería de Sistemas y Computación con promedio dentro del 3% más alto en los últimos 5 años de la facultad de ingeniería",
+    cumLaudeLongDescription:
+      "Me gradué del pregrado de Ingeniería de Sistemas y Computación de la Universidad de los Andes con el reconocimiento Cum Laude.El reconocimiento cum laude se otorga a los estudiantes cuyo promedio ponderadao está dentro del 3% más alto de la Facultad de ingeniería en los últimos 5 años",
     sincoFreelance: "Contrato como independiente",
     sincoDescription:
       "Desarrollo de aplicación web para gestión de contenido multimedia, contacto con los clientes, y gestión de cursos sobre el ERP.",

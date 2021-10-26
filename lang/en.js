@@ -28,6 +28,8 @@ export const en = {
     cumLaudeTitle: "Cum Laude Bachelor Degree",
     cumLaudeDescription:
       "B.S. in Systems and Computing Engineering. Graduted with a GPA within the highest 3% in the last 5 years.",
+    cumLaudeLongDescription:
+      "I obtained a Cum Laude B.S degree in Systems and Computing Engineering from Universidad de los Andes. The Cum Laude recognition is given to the students who had a GPA within the highest 3% of the last 5 years in the engineering faculty",
     sincoFreelance: "Freelance Software development",
     sincoDescription:
       "Developed a content management web tool with hight standards of security, maintainability, and extensibility.",

@@ -8,7 +8,8 @@ import styles from "./ExperienceSection.module.css";
 import React from "react";
 import CustomDialog from "../shared/CustomDialog/CustomDialog";
 import { useState } from "react";
-import TybaDetail from "./Details/TybaDetail";
+import TybaDetail from "./Details/TybaDetail/TybaDetail";
+import CumLaudeDetail from "./Details/CumLaudeDetail/CumLaudeDetail";
 
 const ExperienceSection = () => {
   const [detailDialog, setDetailDialog] = useState(false);
@@ -47,8 +48,8 @@ const ExperienceSection = () => {
       color: "#fff200",
       icon: "/ExperienceSection/Uniandes.png",
       url: "https://uniandes.edu.co/en",
-      showDetail: false,
-      detailComponent: <div>Holii</div>,
+      showDetail: true,
+      detailComponent: <CumLaudeDetail />,
     },
     {
       title: trans("sincoFreelance"),
