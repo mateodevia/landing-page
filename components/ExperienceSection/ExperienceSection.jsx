@@ -27,7 +27,7 @@ const ExperienceSection = () => {
       color: "#ffffff",
       icon: "/ExperienceSection/tyba.png",
       url: "https://tyba.com.co/",
-      showDetail: true,
+      showDetail: false,
       detailComponent: <TybaDetail />,
     },
     {
