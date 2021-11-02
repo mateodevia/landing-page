@@ -50,6 +50,20 @@ export const es = {
     highSchoolDescription: "Grado como bachiller de colegio bilingüe",
     //   Certifications
     myCertifications: "Mis certificaciones",
+    cumLaudeDiploma: "Diploma de reconocimiento Cum Laude",
+    bachelorDiploma:
+      "Diploma de pregrado en Ingeniería de Sistemas y Computación",
+    gitDiploma: "Diploma de curso de Introducción a Git y GitHub",
+    dockerDiploma: "Diploma de curso de Docker",
+    mlIntroductionDiploma:
+      "Diploma de curso de introducción al Machine Learning",
+    mlPracticalFundamentalsDiploma:
+      "Diploma de curso de fundamentos précticos del Machine Learning",
+    cvDiploma: "Diploma de curso de creación de portafolio y CV",
+    profesionalProfileDiploma:
+      "Diploma de curso de optimización del perfil profesional",
+    personalGrowthDiploma:
+      "Diploma de curso de herramientas para el crecimiento personal",
     // Contact
     contactMe: "Contacto",
   },

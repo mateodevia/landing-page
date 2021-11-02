@@ -2,62 +2,21 @@ import styles from "./CertificationsSection.module.css";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
+import { useIntl } from "react-intl";
 import { useState } from "react";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const tutorialSteps = [
-  {
-    label: "Cum Laude Recognition Diploma",
-    imgPath: "Certifications/Cum Laude.png",
-  },
-  {
-    label: "B.S. in Systems and Computing Engineering Diploma",
-    imgPath: "Certifications/Ingeniero de Sistemas y Computación.png",
-  },
-  {
-    label: "Git and Github Introduction Course",
-    imgPath: "Certifications/Github Introduction Course.png",
-  },
-  {
-    label: "Docker Diploma Course Diploma",
-    imgPath: "Certifications/Docker.png",
-  },
-  {
-    label: "Introducción a Machine Learning Course Diploma",
-    imgPath: "Certifications/Introducción a Machine Learning.png",
-  },
-  {
-    label: "Practical fundamentals of Machine Learning Course Diploma",
-    imgPath: "Certifications/Fundamentos Prácticos de Machine Learning.png",
-  },
-  {
-    label: "Git and Github Introduction Course",
-    imgPath: "Certifications/Github Introduction Course.png",
-  },
-  {
-    label: "Portfolio and CV creation Course Diploma",
-    imgPath: "Certifications/Creación de Portafolio y CV.png",
-  },
-  {
-    label: "Professional Profile Optimization Course Diploma",
-    imgPath: "Certifications/Optimización del Perfil Profesional.png",
-  },
-  {
-    label: "Personal Growth Development Course Diploma",
-    imgPath: "Certifications/Herramientas para el crecimiento Personal.png",
-  },
-];
-
 const CertificationsSection = () => {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
-  const maxSteps = tutorialSteps.length;
+  const { formatMessage } = useIntl();
+  const trans = (id) => formatMessage({ id });
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => {
       const next = prevActiveStep + 1;
-      return next < tutorialSteps.length ? next : prevActiveStep;
+      return next < diplomas.length ? next : prevActiveStep;
     });
   };
 
@@ -71,6 +30,49 @@ const CertificationsSection = () => {
   const handleStepChange = (step) => {
     setActiveStep(step);
   };
+
+  const diplomas = [
+    {
+      label: trans("cumLaudeDiploma"),
+      imgPath: "Certifications/Cum Laude.png",
+    },
+    {
+      label: trans("bachelorDiploma"),
+      imgPath: "Certifications/Ingeniero de Sistemas y Computación.png",
+    },
+    {
+      label: trans("gitDiploma"),
+      imgPath: "Certifications/Github Introduction Course.png",
+    },
+    {
+      label: trans("dockerDiploma"),
+      imgPath: "Certifications/Docker.png",
+    },
+    {
+      label: trans("mlIntroductionDiploma"),
+      imgPath: "Certifications/Introducción a Machine Learning.png",
+    },
+    {
+      label: trans("mlPracticalFundamentalsDiploma"),
+      imgPath: "Certifications/Fundamentos Prácticos de Machine Learning.png",
+    },
+    {
+      label: trans("gitDiploma"),
+      imgPath: "Certifications/Github Introduction Course.png",
+    },
+    {
+      label: trans("cvDiploma"),
+      imgPath: "Certifications/Creación de Portafolio y CV.png",
+    },
+    {
+      label: trans("profesionalProfileDiploma"),
+      imgPath: "Certifications/Optimización del Perfil Profesional.png",
+    },
+    {
+      label: trans("personalGrowthDiploma"),
+      imgPath: "Certifications/Herramientas para el crecimiento Personal.png",
+    },
+  ];
 
   return (
     <div className='flexbox'>
@@ -90,7 +92,7 @@ const CertificationsSection = () => {
         onChangeIndex={handleStepChange}
         enableMouseEvents
       >
-        {tutorialSteps.map((step, index) => (
+        {diplomas.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
               <div className={styles.carouselFlexContainer}>

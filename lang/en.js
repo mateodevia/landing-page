@@ -51,6 +51,17 @@ export const en = {
       "Graduated from high school in a bilingual school in Colombia",
     //   Certifications
     myCertifications: "My Certifications",
+    cumLaudeDiploma: "Cum Laude Recognition Diploma",
+    bachelorDiploma: "B.S. in Systems and Computing Engineering Diploma",
+    gitDiploma: "Git and Github Introduction Course Diploma",
+    dockerDiploma: "Docker Course Diploma",
+    mlIntroductionDiploma: "Introduction to Machine Learning Course Diploma",
+    mlPracticalFundamentalsDiploma:
+      "Practical Fundamentals of Machine Learning Course Diploma",
+    cvDiploma: "Portfolio and CV creation Course Diploma",
+    profesionalProfileDiploma:
+      "Professional Profile Optimization Course Diploma",
+    personalGrowthDiploma: "Personal Growth Development Course Diploma",
     // Contact
     contactMe: "Contact Me",
   },
