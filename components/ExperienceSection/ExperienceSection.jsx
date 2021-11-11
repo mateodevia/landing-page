@@ -3,7 +3,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { useIntl } from "react-intl";
+import { useTranslation } from "next-i18next";
 import styles from "./ExperienceSection.module.css";
 import React from "react";
 import CustomDialog from "../shared/CustomDialog/CustomDialog";
@@ -15,15 +15,14 @@ import InalambriaDetail from "./Details/InalambriaDetail/InalambriaDetail";
 const ExperienceSection = () => {
   const [detailDialog, setDetailDialog] = useState(false);
   const [selectedExperience, setSelectedExperience] = useState(undefined);
-  const { formatMessage } = useIntl();
-  const trans = (id) => formatMessage({ id });
+  const { t } = useTranslation("common");
 
   const experiences = [
     {
-      title: trans("tybaRole"),
+      title: t("tybaRole"),
       subTitle: "tyba",
-      description: trans("tybaDescription"),
-      date: `2021 - ${trans("present")}`,
+      description: t("tybaDescription"),
+      date: `2021 - ${t("present")}`,
       color: "#ffffff",
       icon: "/ExperienceSection/tyba.png",
       url: "https://tyba.com.co/",
@@ -31,8 +30,8 @@ const ExperienceSection = () => {
       detailComponent: <TybaDetail />,
     },
     {
-      title: trans("inalambriaRole"),
-      description: trans("inalambriaDescription"),
+      title: t("inalambriaRole"),
+      description: t("inalambriaDescription"),
       subTitle: "Inalambria Internacional",
       date: "2020 - 2021",
       color: "#0055EC",
@@ -42,8 +41,8 @@ const ExperienceSection = () => {
       detailComponent: <InalambriaDetail />,
     },
     {
-      title: trans("cumLaudeTitle"),
-      description: trans("cumLaudeDescription"),
+      title: t("cumLaudeTitle"),
+      description: t("cumLaudeDescription"),
       subTitle: "Universidad de los Andes",
       date: "2020",
       color: "#fff200",
@@ -53,8 +52,8 @@ const ExperienceSection = () => {
       detailComponent: <CumLaudeDetail />,
     },
     {
-      title: trans("sincoFreelance"),
-      description: trans("sincoDescription"),
+      title: t("sincoFreelance"),
+      description: t("sincoDescription"),
       subTitle: "Sincosoft",
       date: "2020",
       color: "#0c4270",
@@ -64,8 +63,8 @@ const ExperienceSection = () => {
       detailComponent: <div>Holii</div>,
     },
     {
-      title: trans("cupi2Title"),
-      description: trans("cupi2Description"),
+      title: t("cupi2Title"),
+      description: t("cupi2Description"),
       subTitle: "Universidad de los Andes",
       date: "2020",
       color: "#fff200",
@@ -75,8 +74,8 @@ const ExperienceSection = () => {
       detailComponent: <div>Holii</div>,
     },
     {
-      title: trans("arquisoftTitle"),
-      description: trans("arquisoftDescription"),
+      title: t("arquisoftTitle"),
+      description: t("arquisoftDescription"),
       subTitle: "Universidad de los Andes",
       date: "2019",
       color: "#fff200",
@@ -86,8 +85,8 @@ const ExperienceSection = () => {
       detailComponent: <div>Holii</div>,
     },
     {
-      title: trans("highSchoolGraduation"),
-      description: trans("highSchoolDescription"),
+      title: t("highSchoolGraduation"),
+      description: t("highSchoolDescription"),
       subTitle: "Colegio Rochester",
       date: "2016",
       color: "#131230",
@@ -155,7 +154,7 @@ const ExperienceSection = () => {
                     }}
                     className={`${styles.learnMoreButton} white-button`}
                   >
-                    {trans("learnMore")}
+                    {t("learnMore")}
                   </button>
                 </div>
               )}

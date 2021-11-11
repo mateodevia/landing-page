@@ -2,7 +2,7 @@ import styles from "./CertificationsSection.module.css";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
-import { useIntl } from "react-intl";
+import { useTranslation } from "next-i18next";
 import { useState } from "react";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -10,8 +10,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const CertificationsSection = () => {
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
-  const { formatMessage } = useIntl();
-  const trans = (id) => formatMessage({ id });
+  const { t } = useTranslation("common");
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => {
@@ -33,43 +32,43 @@ const CertificationsSection = () => {
 
   const diplomas = [
     {
-      label: trans("cumLaudeDiploma"),
+      label: t("cumLaudeDiploma"),
       imgPath: "Certifications/Cum Laude.png",
     },
     {
-      label: trans("bachelorDiploma"),
+      label: t("bachelorDiploma"),
       imgPath: "Certifications/Ingeniero de Sistemas y Computación.png",
     },
     {
-      label: trans("gitDiploma"),
+      label: t("gitDiploma"),
       imgPath: "Certifications/Github Introduction Course.png",
     },
     {
-      label: trans("dockerDiploma"),
+      label: t("dockerDiploma"),
       imgPath: "Certifications/Docker.png",
     },
     {
-      label: trans("mlIntroductionDiploma"),
+      label: t("mlIntroductionDiploma"),
       imgPath: "Certifications/Introducción a Machine Learning.png",
     },
     {
-      label: trans("mlPracticalFundamentalsDiploma"),
+      label: t("mlPracticalFundamentalsDiploma"),
       imgPath: "Certifications/Fundamentos Prácticos de Machine Learning.png",
     },
     {
-      label: trans("gitDiploma"),
+      label: t("gitDiploma"),
       imgPath: "Certifications/Github Introduction Course.png",
     },
     {
-      label: trans("cvDiploma"),
+      label: t("cvDiploma"),
       imgPath: "Certifications/Creación de Portafolio y CV.png",
     },
     {
-      label: trans("profesionalProfileDiploma"),
+      label: t("profesionalProfileDiploma"),
       imgPath: "Certifications/Optimización del Perfil Profesional.png",
     },
     {
-      label: trans("personalGrowthDiploma"),
+      label: t("personalGrowthDiploma"),
       imgPath: "Certifications/Herramientas para el crecimiento Personal.png",
     },
   ];

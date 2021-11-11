@@ -1,10 +1,9 @@
 import * as React from "react";
-import { useIntl } from "react-intl";
+import { useTranslation } from "next-i18next";
 import styles from "./CumLaudeDetail.module.css";
 
 function CumLaudeDetail(props) {
-  const { formatMessage } = useIntl();
-  const trans = (id) => formatMessage({ id });
+  const { t } = useTranslation("common");
 
   return (
     <React.Fragment>
@@ -13,7 +12,7 @@ function CumLaudeDetail(props) {
         src='/Certifications/Cum Laude.png'
         alt='Cum Laude diploma'
       />
-      <p className={styles.description}>{trans("cumLaudeLongDescription")}</p>
+      <p className={styles.description}>{t("cumLaudeLongDescription")}</p>
     </React.Fragment>
   );
 }

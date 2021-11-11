@@ -1,53 +1,34 @@
-import Head from "next/head";
-import StartSection from "../components/StartSection/StartPage";
-import SkillsGraph from "../components/SkillsGraph/SkillsGraph";
-import ExperienceSection from "../components/ExperienceSection/ExperienceSection";
-import React, { useRef } from "react";
-import FooterSection from "../components/FooterSection/FooterSection";
-import { useIntl } from "react-intl";
-import CertificationsSection from "../components/CertificationsSection/CertificationsSection";
+import i18nextConfig from '../next-i18next.config'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
-export default function Home() {
-  const skillsRef = useRef();
-
-  const { formatMessage } = useIntl();
-  const trans = (id) => formatMessage({ id });
-
-  const scrollTo = () => {
-    skillsRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-
-  return (
-    <React.Fragment>
-      <Head>
-        <title>Mateo Devia</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-      <section className=''>
-        <StartSection handleLearnMoreButtonClick={scrollTo} />
-      </section>
-      <section ref={skillsRef} className='skills-section'>
-        <h1 className='selectOnScroll sectionTittle'>{trans("mySkills")}</h1>
-        <SkillsGraph />
-      </section>
-      <section className='experience-section'>
-        <h1 className='selectOnScroll sectionTittle'>
-          {trans("myExperience")}
-        </h1>
-        <ExperienceSection />
-      </section>
-      <section className='certifications-section'>
-        <h1 className='sectionTitleWhite selectOnScroll sectionTittle'>
-          {trans("myCertifications")}
-        </h1>
-        <CertificationsSection />
-      </section>
-      <section className='footer-section'>
-        <h1 className='sectionTitleWhite selectOnScroll sectionTittle'>
-          {trans("contactMe")}
-        </h1>
-        <FooterSection />
-      </section>
-    </React.Fragment>
-  );
+export const getStaticProps = () => {
+  const { locales } = i18nextConfig.i18n
+  return {
+    props: {
+      locales,
+    },
+  }
 }
+
+const Index = ({ locales }) => {
+  const router = useRouter()
+
+  // language detection
+  // not recommended for production, use server redirection instead of this
+  useEffect(() => {
+    for (const locale of locales) {
+      // eslint-disable-next-line no-undef
+      for (const lang of navigator.languages) {
+        if (lang.startsWith(locale)) {
+          router.replace('/' + locale)
+          return
+        }
+      }
+    }
+  }, [])
+
+  return <></>
+}
+
+export default Index

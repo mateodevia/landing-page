@@ -1,10 +1,9 @@
 import * as React from "react";
-import { useIntl } from "react-intl";
+import { useTranslation } from "next-i18next";
 import styles from "./InalambriaDetail.module.css";
 
 function InalambriaDetail(props) {
-  const { formatMessage } = useIntl();
-  const trans = (id) => formatMessage({ id });
+  const { t } = useTranslation("common");
 
   return (
     <React.Fragment>
@@ -17,22 +16,20 @@ function InalambriaDetail(props) {
           />
         </div>
         <div className={styles.textContainer}>
-          <p>{trans("inalambriaLongDescription")}</p>
+          <p>{t("inalambriaLongDescription")}</p>
           <a
             className={"link " + styles.link}
             href='https://inalambria.com/'
             target='_blank'
           >
-            {trans("inalambriaPage")}
+            {t("inalambriaPage")}
             <img className={styles.linkIcon} src='icons/link.svg' alt='' />
           </a>
         </div>
       </div>
-      <h4 className={styles.responsabilitiesTitle}>
-        {trans("responsibilities")}
-      </h4>
+      <h4 className={styles.responsabilitiesTitle}>{t("responsibilities")}</h4>
       <p className={styles.responsabilities}>
-        {trans("inalambriaResponsabilities")}
+        {t("inalambriaResponsabilities")}
       </p>
     </React.Fragment>
   );

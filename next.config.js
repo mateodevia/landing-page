@@ -1,8 +1,5 @@
-// eslint-disable-next-line no-undef
+// const { i18n } = require('./next-i18next.config')
+
 module.exports = {
-  /* config options here */
-  i18n: {
-    locales: ["en", "es"],
-    defaultLocale: "en",
-  },
-};
+  // i18n,
+}

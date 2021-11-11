@@ -1,10 +1,9 @@
 import * as React from "react";
-import { useIntl } from "react-intl";
+import { useTranslation } from "next-i18next";
 import styles from "./TybaDetail.module.css";
 
 function TybaDetail(props) {
-  const { formatMessage } = useIntl();
-  const trans = (id) => formatMessage({ id });
+  const { t } = useTranslation("common");
 
   return (
     <React.Fragment>
@@ -17,21 +16,19 @@ function TybaDetail(props) {
           />
         </div>
         <div className={styles.textContainer}>
-          <p>{trans("tybaLongDescription")}</p>
+          <p>{t("tybaLongDescription")}</p>
           <a
             className={"link " + styles.link}
             href='https://tyba.com.co/'
             target='_blank'
           >
-            {trans("tybaPage")}
+            {t("tybaPage")}
             <img className={styles.linkIcon} src='icons/link.svg' alt='' />
           </a>
         </div>
       </div>
-      <h4 className={styles.responsabilitiesTitle}>
-        {trans("responsibilities")}
-      </h4>
-      <p className={styles.responsabilities}>{trans("tybaResponsibilities")}</p>
+      <h4 className={styles.responsabilitiesTitle}>{t("responsibilities")}</h4>
+      <p className={styles.responsabilities}>{t("tybaResponsibilities")}</p>
     </React.Fragment>
   );
 }
