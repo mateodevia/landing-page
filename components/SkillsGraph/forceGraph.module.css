@@ -2,6 +2,11 @@
   width: 100%;
   overflow-x: scroll;
   margin: auto 0;
+  scrollbar-width: none;
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
