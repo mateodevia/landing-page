@@ -1,12 +1,18 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
 import styles from "./StartPage.module.css";
+import { StaticI18nLink } from "../StaticI18nLink";
 
 const StartPage = (props) => {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
 
   return (
     <div className={`${styles.container} flexbox`}>
+      <StaticI18nLink href='/' locale={i18n.language === "en" ? "es" : "en"}>
+        <button className={styles.translation_icon}>
+          <img src={"/icons/translation.png"} />
+        </button>
+      </StaticI18nLink>
       <div className={`${styles.start_description_container} flexbox`}>
         <div className={`${styles.text_container}`}>
           <h3>Mateo Devia Vega</h3>
