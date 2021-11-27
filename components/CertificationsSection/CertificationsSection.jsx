@@ -76,11 +76,11 @@ const CertificationsSection = () => {
   return (
     <div className='flexbox'>
       <button
-        className={"red-button " + styles.arrowButton}
+        className={"red-button " + styles.arrow_button}
         onClick={handleBack}
       >
         <img
-          className={styles.arrowIcon}
+          className={styles.arrow_icon}
           src='Certifications/leftArrow.svg'
           alt=''
         />
@@ -94,10 +94,10 @@ const CertificationsSection = () => {
         {diplomas.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <div className={styles.carouselFlexContainer}>
-                <div className={styles.carouselImageContainer}>
+              <div className={styles.carousel_flex_container}>
+                <div className={styles.carousel_image_container}>
                   <img
-                    className={styles.carouselImage}
+                    className={styles.carousel_image}
                     src={step.imgPath}
                     alt={step.label}
                   />
@@ -108,11 +108,11 @@ const CertificationsSection = () => {
         ))}
       </AutoPlaySwipeableViews>
       <button
-        className={"red-button " + styles.arrowButton}
+        className={"red-button " + styles.arrow_button}
         onClick={handleNext}
       >
         <img
-          className={styles.arrowIcon}
+          className={styles.arrow_icon}
           src='Certifications/rightArrow.svg'
           alt=''
         />

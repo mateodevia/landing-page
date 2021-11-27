@@ -27,12 +27,12 @@ function CustomDialog(props) {
         <img
           src='/icons/close.svg'
           alt='close icon'
-          className={styles.closeIcon}
+          className={styles.close_icon}
           onClick={props.onClose}
         />
       </div>
-      <h1 className={styles.dialogTitle}>{props.title}</h1>
-      <h2 className={styles.dialogSubTitle}>{props.subTitle}</h2>
+      <h1 className={styles.dialog_title}>{props.title}</h1>
+      <h2 className={styles.dialog_sub_title}>{props.sub_title}</h2>
       {props.children}
     </Custom>
   );

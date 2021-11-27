@@ -47,28 +47,28 @@ div.tooltip {
   pointer-events: none;
 }
 
-.subjectContainer {
+.subject_container {
   height: 100%;
   cursor: grab;
 }
 
-.subjectLabel {
+.subject_label {
   margin: auto;
   text-align: center;
   font-size: 12px;
   font-family: "Poppins", sans-serif;
 }
 
-.skillsNode {
+.skills_node {
   cursor: grab;
 }
 
-.skillsIcon {
+.skills_icon {
   cursor: grab;
 }
 
 @media only screen and (max-width: 769px) {
-  .subjectLabel {
+  .subject_label {
     margin: auto;
     text-align: center;
     font-size: 10px;

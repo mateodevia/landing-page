@@ -154,7 +154,7 @@ export function runForceGraph(
     .append("g")
     .attr("stroke", "#fff")
     .attr("stroke-width", 2)
-    .attr("class", styles.skillsNode)
+    .attr("class", styles.skills_node)
     .selectAll("circle")
     .data(nodes)
     .join("circle")
@@ -172,15 +172,17 @@ export function runForceGraph(
     .attr("width", (d) => getRadius(d) * 2)
     .attr("height", (d) => getRadius(d) * 2)
     .append("xhtml:div")
-    .attr("class", `flexbox ${styles.subjectContainer}`)
+    .attr("class", `flexbox ${styles.subject_container}`)
     .html((d) => {
-      return `<div class="${styles.subjectLabel} ${getClass(d)}">${d.id}</div>`;
+      return `<div class="${styles.subject_label} ${getClass(d)}">${
+        d.id
+      }</div>`;
     })
     .call(drag(simulation));
 
   const icon = svg
     .append("g")
-    .attr("class", styles.skillsIcon)
+    .attr("class", styles.skills_icon)
     .selectAll("text")
     .data(nodes.filter((n) => n.type === "tool"))
     .enter()

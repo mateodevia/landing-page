@@ -1,8 +1,8 @@
-.mainContainer {
+.main_container {
   display: flex;
 }
 
-.imageContainer {
+.image_container {
   width: 250px;
   padding: 20px;
 }
@@ -11,7 +11,7 @@
   width: 100%;
 }
 
-.textContainer {
+.text_container {
   width: 200px;
 }
 
@@ -19,14 +19,14 @@
   display: flex;
 }
 
-.linkIcon {
+.link_icon {
   margin: 3px 4px;
   height: 14px;
   filter: invert(32%) sepia(82%) saturate(972%) hue-rotate(330deg)
     brightness(107%) contrast(92%);
 }
 
-.responsabilitiesTitle {
+.responsabilities_title {
   margin: 10px 0 0 0;
 }
 
@@ -35,15 +35,15 @@
 }
 
 @media only screen and (max-width: 570px) {
-  .mainContainer {
+  .main_container {
     display: inline-block;
   }
 
-  .imageContainer {
+  .image_container {
     width: 100%;
   }
 
-  .textContainer {
+  .text_container {
     width: 100%;
   }
 }

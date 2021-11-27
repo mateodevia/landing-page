@@ -152,7 +152,7 @@ const ExperienceSection = () => {
                       setDetailDialog(true);
                       setSelectedExperience(experience);
                     }}
-                    className={`${styles.learnMoreButton} white-button`}
+                    className={`${styles.learn_more_button} white-button`}
                   >
                     {t("learnMore")}
                   </button>
