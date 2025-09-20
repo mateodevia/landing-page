@@ -46,6 +46,11 @@ function MyApp({ Component, pageProps }) {
 const WrappedApp = appWithTranslation(MyApp);
 
 export default function RouterEmulatedApp({ ...props }) {
-  props.router.locale = props.router.query.locale;
-  return <WrappedApp {...props} />;
+  // Create a new router object with the locale from query params
+  const router = {
+    ...props.router,
+    locale: props.router.query.locale || props.router.locale
+  };
+  
+  return <WrappedApp {...props} router={router} />;
 }
