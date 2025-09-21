@@ -171,7 +171,7 @@ const data = {
       color: '#73a9f5',
       type: 'subject',
       text: 'White',
-      cluster: 2,
+      cluster: 1,
     },
     {
       id: 'AWS',
@@ -179,7 +179,7 @@ const data = {
       color: '#f5f5f5',
       type: 'tool',
       icon: '/SkillsGraph/aws.svg',
-      cluster: 2,
+      cluster: 1,
     },
     {
       id: 'Node JS',
@@ -363,7 +363,7 @@ const data = {
       color: '#BE79F3',
       type: 'subject',
       text: 'White',
-      cluster: 2,
+      cluster: 1,
     },
     {
       id: 'Project Management',
@@ -371,7 +371,7 @@ const data = {
       color: '#BE79F3',
       type: 'subject',
       text: 'White',
-      cluster: 2,
+      cluster: 1,
     },
     {
       id: 'Agile',
@@ -387,7 +387,7 @@ const data = {
       color: '#00bdda',
       type: 'subject',
       text: 'White',
-      cluster: 2,
+      cluster: 1,
     },
     {
       id: 'Solidity',
