@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 import { runForceGraph } from './GraphGenerator';
 import styles from './forceGraph.module.css';
+import useResizeObserver from '../../hooks/useResizeObserver';
 
 const data = {
   nodes: [
@@ -730,11 +731,16 @@ const data = {
 
 export default function ForceGraph() {
   const containerRef = useRef(null);
+  const dimensions = useResizeObserver(containerRef);
 
   useEffect(() => {
     let destroyFn;
+    let observer;
 
-    if (containerRef.current) {
+    if (containerRef.current && dimensions) {
+      while (containerRef.current.firstChild) {
+        containerRef.current.removeChild(containerRef.current.firstChild);
+      }
       const { destroy, move } = runForceGraph(
         containerRef.current,
         data.links,
@@ -757,12 +763,19 @@ export default function ForceGraph() {
       };
       // initialize IntersectionObserver
       // and attaching to Load More div
-      const observer = new IntersectionObserver(handleObserver, options);
+      observer = new IntersectionObserver(handleObserver, options);
       observer.observe(containerRef.current);
     }
 
-    return destroyFn;
-  }, []);
+    return () => {
+      if (destroyFn) {
+        destroyFn();
+      }
+      if (observer) {
+        observer.disconnect();
+      }
+    };
+  }, [dimensions, nodeHoverTooltip]);
 
   const nodeHoverTooltip = useCallback((node) => {
     return `<div>${node.id}</div>`;
