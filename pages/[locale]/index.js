@@ -28,10 +28,10 @@ const Homepage = () => {
         <section className=''>
           <StartSection handleLearnMoreButtonClick={scrollTo} />
         </section>
-        <section ref={skillsRef} className='skills-section'>
+        {/* <section ref={skillsRef} className='skills-section'>
           <h1 className='selectOnScroll sectionTittle'>{t("mySkills")}</h1>
           <SkillsGraph />
-        </section>
+        </section> */}
         <section className='experience-section'>
           <h1 className='selectOnScroll sectionTittle'>{t("myExperience")}</h1>
           <ExperienceSection />
