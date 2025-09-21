@@ -56,6 +56,8 @@
   background: none;
   border: none;
   cursor: pointer;
+  filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg)
+    brightness(0%) contrast(100%);
 }
 .translation_icon img {
   height: 100%;
@@ -219,9 +221,13 @@
 
   .cv {
     font-size: 12px;
+    margin-right: 8px;
+    padding: 3px 14px;
   }
   
   .learn_more {
     font-size: 12px;
+    margin-left: 8px;
+    padding: 3px 14px;
   }
 }

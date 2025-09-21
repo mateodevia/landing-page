@@ -12,10 +12,10 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const Homepage = () => {
   const { t, i18n } = useTranslation("common");
-  const skillsRef = useRef();
+  const experienceRef = useRef();
 
   const scrollTo = () => {
-    skillsRef.current.scrollIntoView({ behavior: "smooth" });
+    experienceRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -28,11 +28,11 @@ const Homepage = () => {
         <section className=''>
           <StartSection handleLearnMoreButtonClick={scrollTo} />
         </section>
-        {/* <section ref={skillsRef} className='skills-section'>
+        {/* <section ref={experienceRef} className='skills-section'>
           <h1 className='selectOnScroll sectionTittle'>{t("mySkills")}</h1>
           <SkillsGraph />
         </section> */}
-        <section className='experience-section'>
+        <section ref={experienceRef} className='experience-section'>
           <h1 className='selectOnScroll sectionTittle'>{t("myExperience")}</h1>
           <ExperienceSection />
         </section>

@@ -31,7 +31,7 @@ const StartPage = (props) => {
             Mateo Devia Vega
           </h1>
           {/* <div className={`${styles.line} black-line`} /> */}
-          <h2 style={{ fontSize: `${fontSize * 0.5}px`, marginTop: '-15px' }}>Software Engineer</h2>
+          <h2 style={{ fontSize: `${fontSize * 0.5}px`, marginTop: '-15px' }}>{t('softwareEngineer')}</h2>
           <div className={`${styles.buttons_container} flexbox`}>
             <button className={`${styles.cv} red-button`}>
               <a href={t('resumeLink')} target='_blank'>
