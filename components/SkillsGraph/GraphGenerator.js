@@ -50,9 +50,9 @@ export function runForceGraph(
   };
 
   const getCollision = (d) => {
-    let extraSpace = 5;
+    let extraSpace = 15;
     if (medium) {
-      extraSpace = 10;
+      extraSpace = 15;
     } else if (small) {
       extraSpace = 12;
     }
@@ -119,9 +119,10 @@ export function runForceGraph(
         .strength(3)
         .distance(getDistance)
     )
-    .force("charge", d3.forceManyBody())
+    .force("charge", d3.forceManyBody().strength(-150))
     .force("collision", d3.forceCollide().radius(getCollision))
-    .force("center", d3.forceCenter(0, 0));
+    .force("center", d3.forceCenter(0, 0))
+    .velocityDecay(0.5);
 
   const clusters = {
     0: 0,
