@@ -18,8 +18,7 @@ const StartPage = (props) => {
           <img src={'/icons/translation.png'} />
         </button>
       </StaticI18nLink>
-      <div className={`${styles.start_description_container} flexbox`}>          
-        {width < 1000 && <div style={{ padding: '10px', flexGrow: 1 }}><SkillsGraph /></div>}    
+      <div className={`${styles.start_description_container} flexbox`}>  
         <div className={`${styles.text_container}`} ref={containerRef}>    
           <div className={`${styles.photo_container} flexbox`}>
                 <img
