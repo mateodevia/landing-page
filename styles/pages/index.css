@@ -10,6 +10,12 @@
   scroll-snap-align: start;
 }
 
+.about-section {
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+}
+
 .skills-section {
   height: 100vh;
   background-color: var(--secondary-background);

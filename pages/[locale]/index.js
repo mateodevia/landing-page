@@ -9,13 +9,14 @@ import { useTranslation } from "next-i18next";
 import i18nextConfig from "../../next-i18next.config";
 import { getI18nPaths } from "../../getI18nPaths";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import AboutSection from "../../components/AboutSection/AboutSection";
 
 const Homepage = () => {
   const { t, i18n } = useTranslation("common");
-  const experienceRef = useRef();
+  const aboutRef = useRef();
 
   const scrollTo = () => {
-    experienceRef.current.scrollIntoView({ behavior: "smooth" });
+    aboutRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -28,20 +29,24 @@ const Homepage = () => {
         <section className=''>
           <StartSection handleLearnMoreButtonClick={scrollTo} />
         </section>
-        {/* <section ref={experienceRef} className='skills-section'>
+        <section ref={aboutRef} className='about-section'>
+          <h1 className='sectionTitleWhite selectOnScroll sectionTittle'>{t("aboutMe")}</h1>
+          <AboutSection />
+        </section>
+        {/* <section ref={aboutRef} className='skills-section'>
           <h1 className='selectOnScroll sectionTittle'>{t("mySkills")}</h1>
           <SkillsGraph />
         </section> */}
-        <section ref={experienceRef} className='experience-section'>
+        <section className='experience-section'>
           <h1 className='selectOnScroll sectionTittle'>{t("myExperience")}</h1>
           <ExperienceSection />
         </section>
-        <section className='certifications-section'>
+        {/* <section className='certifications-section'>
           <h1 className='sectionTitleWhite selectOnScroll sectionTittle'>
             {t("myCertifications")}
           </h1>
           <CertificationsSection />
-        </section>
+        </section> */}
         <section className='footer-section'>
           <h1 className='sectionTitleWhite selectOnScroll sectionTittle'>
             {t("contactMe")}

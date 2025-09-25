@@ -37,7 +37,7 @@
 .photo_buttons_container {
   width: 50%;
   height: 100vh;
-  padding: 0;
+  padding: 10px 0;
   padding-right: 5vw;
 }
 
@@ -112,7 +112,7 @@
 
 .cv {
   animation: appear-button-red 0.5s forwards;
-  animation-delay: 1s;
+  animation-delay: 0.5s;
 }
 @keyframes appear-button-red {
   0% {
@@ -132,7 +132,7 @@
 
 .learn_more {
   animation: appear-button-black 0.5s forwards;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 @keyframes appear-button-black {
   0% {
