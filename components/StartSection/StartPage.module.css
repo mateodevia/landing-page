@@ -1,13 +1,13 @@
 .container {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background-color: var(--secondary-background);
 }
 
 .start_description_container {
   width: 50%;
-  height: 100vh;
+  height: 100dvh;
   flex-direction: column;
   text-align: center;
 }
@@ -159,7 +159,7 @@
   }
   .start_description_container {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     flex-direction: column;
     justify-content: center;
   }
