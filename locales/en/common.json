@@ -39,5 +39,7 @@
   "cvDiploma": "Portfolio and CV creation Course Diploma",
   "profesionalProfileDiploma": "Professional Profile Optimization Course Diploma",
   "personalGrowthDiploma": "Personal Growth Development Course Diploma",
-  "contactMe": "Contact Me"
+  "contactMe": "Contact Me",
+  "aboutMe": "A little about me",
+  "aboutMeText": "I’m a Tech Lead / AI-minded Senior Software Engineer who loves turning complex problems into scalable, elegant systems. I’ve led backend teams, defined software architecture for microservices at scale, and built strong testing/CI frameworks. I enjoy mentoring engineers, aligning stakeholders, and building software."
 }
