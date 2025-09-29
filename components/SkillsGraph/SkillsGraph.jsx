@@ -12,6 +12,7 @@ const data = {
       type: 'subject',
       text: 'White',
       cluster: 1,
+      multiline: true,
     },
     {
       id: 'Back-end',
@@ -78,12 +79,13 @@ const data = {
       cluster: 1,
     },
     {
-      id: 'Software architecture',
+      id: 'Software Architecture',
       size: 150,
       color: '#fcd303',
       type: 'subject',
       text: 'Black',
       cluster: 2,
+      multiline: true,
     },
     {
       id: 'Testing',
@@ -124,6 +126,7 @@ const data = {
       type: 'subject',
       text: 'White',
       cluster: 1,
+      multiline: true,
     },
     {
       id: 'Langchain',
@@ -166,7 +169,7 @@ const data = {
       cluster: 1,
     },
     {
-      id: 'Cloud computing',
+      id: 'Cloud Computing',
       size: 100,
       color: '#73a9f5',
       type: 'subject',
@@ -502,27 +505,27 @@ const data = {
       value: 30,
     },
     {
-      source: 'Software architecture',
+      source: 'Software Architecture',
       target: 'Software Engineering',
       value: 80,
     },
     {
-      source: 'Software architecture',
-      target: 'Cloud computing',
+      source: 'Software Architecture',
+      target: 'Cloud Computing',
       value: 80,
     },
     {
       source: 'Software Engineering',
-      target: 'Cloud computing',
+      target: 'Cloud Computing',
       value: 80,
     },
     {
-      source: 'Software architecture',
+      source: 'Software Architecture',
       target: 'AWS',
       value: 5,
     },
     {
-      source: 'Cloud computing',
+      source: 'Cloud Computing',
       target: 'AWS',
       value: 5,
     },
@@ -597,12 +600,12 @@ const data = {
       value: 5,
     },
     {
-      source: 'Cloud computing',
+      source: 'Cloud Computing',
       target: 'Heroku',
       value: 5,
     },
     {
-      source: 'Cloud computing',
+      source: 'Cloud Computing',
       target: 'Firebase',
       value: 5,
     },
@@ -722,7 +725,7 @@ const data = {
       value: 5,
     },
     {
-      source: 'Cloud computing',
+      source: 'Cloud Computing',
       target: 'Vercel',
       value: 5,
     },

@@ -175,8 +175,9 @@ export function runForceGraph(
     .append("xhtml:div")
     .attr("class", `flexbox ${styles.subject_container}`)
     .html((d) => {
+      const label = d.multiline ? d.id.replace(' ', '<br/>') : d.id
       return `<div class="${styles.subject_label} ${getClass(d)}">${
-        d.id
+        label
       }</div>`;
     })
     .call(drag(simulation));
