@@ -3,15 +3,19 @@
 }
 
 .image_container {
+  display: flex;
+  align-items: center;
   width: 250px;
 }
 
 .image {
   width: 100%;
+  margin: auto 0
 }
 
 .text_container {
   width: 200px;
+  flex-grow: 1;
 }
 
 .link {

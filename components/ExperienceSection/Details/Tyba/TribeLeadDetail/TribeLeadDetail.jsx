@@ -16,7 +16,7 @@ function TribeLeadDetail(props) {
           />
         </div>
         <div className={styles.text_container}>
-          <p>{t("tybaLongDescription")}</p>
+          <p>{t("tribeLeadLongDescription")}</p>
           <a
             className={"link " + styles.link}
             href='https://tyba.com.co/'
@@ -28,7 +28,9 @@ function TribeLeadDetail(props) {
         </div>
       </div>
       <h4 className={styles.responsabilities_title}>{t("responsibilities")}</h4>
-      <p className={styles.responsabilities}>{t("tybaResponsibilities")}</p>
+      <p className={styles.responsabilities}>{t("tribeLeadResponsabilities")}</p>
+      <h4 className={styles.responsabilities_title}>{t("achievements")}</h4>
+      <p className={styles.responsabilities}>{t("tribeLeadAchievements")}</p>
     </React.Fragment>
   );
 }
