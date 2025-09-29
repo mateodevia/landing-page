@@ -12,6 +12,11 @@ const Custom = styled(Dialog)`
     padding: 30px;
     background-color: #ebebeb;
     box-shadow: 6px 6px 8px #d0d0d0, -6px -6px 8px #ffffff;
+    
+    @media only screen and (max-width: 400px) {
+      padding: 20px;
+      margin: 10px;
+    }
   }
 `;
 

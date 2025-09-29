@@ -8,9 +8,12 @@ import styles from "./ExperienceSection.module.css";
 import React from "react";
 import CustomDialog from "../shared/CustomDialog/CustomDialog";
 import { useState } from "react";
-import TybaDetail from "./Details/TybaDetail/TybaDetail";
+import MidBackendDetail from "./Details/Tyba/MidBackendDetail/MidBackendDetail";
 import CumLaudeDetail from "./Details/CumLaudeDetail/CumLaudeDetail";
 import InalambriaDetail from "./Details/InalambriaDetail/InalambriaDetail";
+import SquadLeadDetail from "./Details/Tyba/SquadLeadDetail/SquadLeadDetail";
+import TribeLeadDetail from "./Details/Tyba/TribeLeadDetail/TribeLeadDetail";
+import ChapterLeadDetail from "./Details/Tyba/ChapterLeadDetail/ChapterLeadDetail";
 
 const ExperienceSection = () => {
   const [detailDialog, setDetailDialog] = useState(false);
@@ -19,15 +22,48 @@ const ExperienceSection = () => {
 
   const experiences = [
     {
-      title: t("tybaRole"),
+      title: t("headOfBackend"),
       subTitle: "tyba",
-      description: t("tybaDescription"),
-      date: `2021 - ${t("present")}`,
+      description: t("headOfBackendDescription"),
+      date: `2024 - ${t("present")}`,
       color: "#ffffff",
       icon: "/ExperienceSection/tyba.png",
       url: "https://tyba.com.co/",
-      showDetail: false,
-      detailComponent: <TybaDetail />,
+      showDetail: true,
+      detailComponent: <ChapterLeadDetail />,
+    },
+    {
+      title: t("tribeLead"),
+      subTitle: "tyba",
+      description: t("tribeLeadDescription"),
+      date: `2023`,
+      color: "#ffffff",
+      icon: "/ExperienceSection/tyba.png",
+      url: "https://tyba.com.co/",
+      showDetail: true,
+      detailComponent: <TribeLeadDetail />,
+    },
+    {
+      title: t("squadLead"),
+      subTitle: "tyba",
+      description: t("squadLeadDescription"),
+      date: `2022 - 2023`,
+      color: "#ffffff",
+      icon: "/ExperienceSection/tyba.png",
+      url: "https://tyba.com.co/",
+      showDetail: true,
+      detailComponent: <SquadLeadDetail />,
+    },
+    {
+      title: t("midBackend"),
+      subTitle: "tyba",
+      description: t("midBackendDescription"),
+      date: `2021 - 2022`,
+      color: "#ffffff",
+      icon: "/ExperienceSection/tyba.png",
+      url: "https://tyba.com.co/",
+      showDetail: true,
+      detailComponent: <MidBackendDetail />,
     },
     {
       title: t("inalambriaRole"),

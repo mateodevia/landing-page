@@ -1,0 +1,52 @@
+.main_container {
+  display: flex;
+}
+
+.image_container {
+  display: flex;
+  align-items: center;
+  width: 250px;
+}
+
+.image {
+  width: 100%;
+  margin: auto 0
+}
+
+.text_container {
+  width: 200px;
+  flex-grow: 1;
+}
+
+.link {
+  display: flex;
+}
+
+.link_icon {
+  margin: 3px 4px;
+  height: 14px;
+  filter: invert(32%) sepia(82%) saturate(972%) hue-rotate(330deg)
+    brightness(107%) contrast(92%);
+}
+
+.responsabilities_title {
+  margin: 10px 0 0 0;
+}
+
+.responsabilities {
+  white-space: pre-wrap;
+}
+
+@media only screen and (max-width: 570px) {
+  .main_container {
+    display: inline-block;
+  }
+
+  .image_container {
+    width: 100%;
+  }
+
+  .text_container {
+    width: 100%;
+  }
+}

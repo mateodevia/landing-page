@@ -1,8 +1,8 @@
 import * as React from "react";
 import { useTranslation } from "next-i18next";
-import styles from "./TybaDetail.module.css";
+import styles from "./MidBackendDetail.module.css";
 
-function TybaDetail(props) {
+function MidBackendDetail(props) {
   const { t } = useTranslation("common");
 
   return (
@@ -33,4 +33,4 @@ function TybaDetail(props) {
   );
 }
 
-export default TybaDetail;
+export default MidBackendDetail;
