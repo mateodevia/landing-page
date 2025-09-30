@@ -27,8 +27,8 @@ function MidBackendDetail(props) {
           </a>
         </div>
       </div>
-      <h4 className={styles.responsabilities_title}>{t("responsibilities")}</h4>
-      <p className={styles.responsabilities}>{t("tybaResponsibilities")}</p>
+      <h4 className={styles.Responsibilities_title}>{t("responsibilities")}</h4>
+      <p className={styles.Responsibilities}>{t("tybaResponsibilities")}</p>
     </React.Fragment>
   );
 }

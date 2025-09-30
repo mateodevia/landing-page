@@ -27,10 +27,10 @@ function TribeLeadDetail(props) {
           </a>
         </div>
       </div>
-      <h4 className={styles.responsabilities_title}>{t("responsibilities")}</h4>
-      <p className={styles.responsabilities}>{t("tribeLeadResponsabilities")}</p>
-      <h4 className={styles.responsabilities_title}>{t("achievements")}</h4>
-      <p className={styles.responsabilities}>{t("tribeLeadAchievements")}</p>
+      <h4 className={styles.Responsibilities_title}>{t("responsibilities")}</h4>
+      <p className={styles.Responsibilities}>{t("tribeLeadResponsibilities")}</p>
+      <h4 className={styles.Responsibilities_title}>{t("achievements")}</h4>
+      <p className={styles.Responsibilities}>{t("tribeLeadAchievements")}</p>
     </React.Fragment>
   );
 }

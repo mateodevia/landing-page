@@ -27,10 +27,10 @@ function SquadLeadDetail(props) {
           </a>
         </div>
       </div>
-      <h4 className={styles.responsabilities_title}>{t("responsibilities")}</h4>
-      <p className={styles.responsabilities}>{t("squadLeadResponsabilities")}</p>
-      <h4 className={styles.responsabilities_title}>{t("achievements")}</h4>
-      <p className={styles.responsabilities}>{t("squadLeadAchievements")}</p>
+      <h4 className={styles.Responsibilities_title}>{t("responsibilities")}</h4>
+      <p className={styles.Responsibilities}>{t("squadLeadResponsibilities")}</p>
+      <h4 className={styles.Responsibilities_title}>{t("achievements")}</h4>
+      <p className={styles.Responsibilities}>{t("squadLeadAchievements")}</p>
     </React.Fragment>
   );
 }

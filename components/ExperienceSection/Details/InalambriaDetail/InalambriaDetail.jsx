@@ -27,9 +27,9 @@ function InalambriaDetail(props) {
           </a>
         </div>
       </div>
-      <h4 className={styles.responsabilities_title}>{t("responsibilities")}</h4>
-      <p className={styles.responsabilities}>
-        {t("inalambriaResponsabilities")}
+      <h4 className={styles.Responsibilities_title}>{t("responsibilities")}</h4>
+      <p className={styles.Responsibilities}>
+        {t("inalambriaResponsibilities")}
       </p>
     </React.Fragment>
   );

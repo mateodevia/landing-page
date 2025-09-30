@@ -64,7 +64,7 @@ const CertificationsSection = () => {
       imgPath: "Certifications/Creación de Portafolio y CV.png",
     },
     {
-      label: t("profesionalProfileDiploma"),
+      label: t("professionalProfileDiploma"),
       imgPath: "Certifications/Optimización del Perfil Profesional.png",
     },
     {

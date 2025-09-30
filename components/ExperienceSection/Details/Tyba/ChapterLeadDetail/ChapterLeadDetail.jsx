@@ -27,10 +27,10 @@ function ChapterLeadDetail(props) {
           </a>
         </div>
       </div>
-      <h4 className={styles.responsabilities_title}>{t("responsibilities")}</h4>
-      <p className={styles.responsabilities}>{t("chapterLeadResponsabilities")}</p>
-      <h4 className={styles.responsabilities_title}>{t("achievements")}</h4>
-      <p className={styles.responsabilities}>{t("chapterLeadAchievements")}</p>
+      <h4 className={styles.Responsibilities_title}>{t("responsibilities")}</h4>
+      <p className={styles.Responsibilities}>{t("chapterLeadResponsibilities")}</p>
+      <h4 className={styles.Responsibilities_title}>{t("achievements")}</h4>
+      <p className={styles.Responsibilities}>{t("chapterLeadAchievements")}</p>
     </React.Fragment>
   );
 }

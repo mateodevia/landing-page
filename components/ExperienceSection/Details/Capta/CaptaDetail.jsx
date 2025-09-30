@@ -27,9 +27,9 @@ function CaptaDetail(props) {
           </a>
         </div>
       </div>
-      <h4 className={styles.responsabilities_title}>{t("responsibilities")}</h4>
-      <p className={styles.responsabilities}>
-        {t("captaResponsabilities")}
+      <h4 className={styles.Responsibilities_title}>{t("responsibilities")}</h4>
+      <p className={styles.Responsibilities}>
+        {t("captaResponsibilities")}
       </p>
     </React.Fragment>
   );
