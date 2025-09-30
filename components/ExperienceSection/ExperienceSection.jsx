@@ -22,9 +22,9 @@ const ExperienceSection = () => {
 
   const experiences = [
     {
-      title: t("headOfBackend"),
+      title: t("chapterLead"),
       subTitle: "tyba",
-      description: t("headOfBackendDescription"),
+      description: t("chapterLeadDescription"),
       date: `2024 - ${t("present")}`,
       color: "#ffffff",
       icon: "/ExperienceSection/tyba.png",
