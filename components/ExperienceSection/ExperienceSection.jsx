@@ -14,6 +14,7 @@ import InalambriaDetail from "./Details/InalambriaDetail/InalambriaDetail";
 import SquadLeadDetail from "./Details/Tyba/SquadLeadDetail/SquadLeadDetail";
 import TribeLeadDetail from "./Details/Tyba/TribeLeadDetail/TribeLeadDetail";
 import ChapterLeadDetail from "./Details/Tyba/ChapterLeadDetail/ChapterLeadDetail";
+import CaptaDetail from "./Details/Capta/CaptaDetail";
 
 const ExperienceSection = () => {
   const [detailDialog, setDetailDialog] = useState(false);
@@ -75,6 +76,20 @@ const ExperienceSection = () => {
       url: "https://www.inalambria.com/",
       showDetail: true,
       detailComponent: <InalambriaDetail />,
+    },
+    {
+      title: t("captaTitle"),
+      description: t("captaDescription"),
+      subTitle: "Capta",
+      date: "2020 - 2021",
+      color: "#38557a",
+      icon: "/ExperienceSection/capta.png",
+      url: "https://www.capta.co/",
+      showDetail: true,
+      detailComponent: <CaptaDetail />,
+      iconStyles: {
+        width: "90%",
+      },
     },
     {
       title: t("cumLaudeTitle"),
@@ -154,7 +169,7 @@ const ExperienceSection = () => {
                   target='_blank'
                   className={`${styles.element_icon_container} flexbox`}
                 >
-                  <img className={styles.element_icon} src={experience.icon} />
+                  <img className={styles.element_icon} style={experience.iconStyles} src={experience.icon} />
                 </a>
               }
               contentStyle={{

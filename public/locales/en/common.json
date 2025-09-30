@@ -57,5 +57,10 @@
   "squadLeadResponsabilities": "- Leading the design and development of technical solutions that address business requirements. \n- Orchestrating cross-functional collaboration between business, operations, and development teams. \n- Ensuring the correct operation of the Peru products by meticulously monitoring performance and addressing any issues that arise. \n- Upholding a high standard of code quality through code reviews, best practices enforcement, and continuous improvement initiatives.",
   "squadLeadAchievements": "- Improved the SAGA Pattern implementation of the company, by adding direct access to DB in the orchestrator microservice \n- Stablished the Peru version of tyba, as the most profitable product in the company.",
   "midBackend": "Mid Backend Developer",
-  "midBackendDescription": "Full time job as backend developer for a Fintech company used by thousands of users"
+  "midBackendDescription": "Full time job as backend developer for a Fintech company used by thousands of users",
+  "captaTitle": "Co Founder, Software Engineer and Product Designer",
+  "captaDescription": "Co-founded a platform that automates client claims and help-desk operations",
+  "captaLongDescription": "Capta is a platform that automates client claims and help-desk operations through configurable workflows, SLA rules, and analytics",
+  "captaResponsabilities": "- Contributing to building the first MVP of the product. \n- Designing the product’s UI/UX in Figma and establishing a lightweight design system to ensure consistency and speed. \n- Setting up delivery processes and tooling (JIRA + dev workflows) to plan sprints, track progress, and improve team predictability.",
+  "captaPage": "Capta´s home page"
 }

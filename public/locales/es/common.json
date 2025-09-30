@@ -57,5 +57,10 @@
   "squadLeadResponsabilities": "- Liderar el diseño y desarrollo de soluciones técnicas que aborden los requisitos del negocio. \n- Orquestar la colaboración entre equipos de negocios, operaciones y desarrollo. \n- Garantizar el correcto funcionamiento de los productos de Perú mediante el monitoreo meticuro del rendimiento y la resolución de cualquier problema que surja. \n- Mantener un alto estándar de calidad de código a través de revisiones de código, aplicación de buenas prácticas y iniciativas de mejora continua.",
   "squadLeadAchievements": "- Mejoré la implementación del patrón SAGA de la empresa, agregando acceso directo a la base de datos en el microservicio orquestador \n- Establecí la versión Perú de tyba como el producto más rentable de la empresa.",
   "midBackend": "Ingeniero Backend Medio",
-  "midBackendDescription": "Trabajo tiempo completo como ingeniero backend para una empresa Fintech usada por miles de usuarios"
+  "midBackendDescription": "Trabajo tiempo completo como ingeniero backend para una empresa Fintech usada por miles de usuarios",
+  "captaTitle": "Co Fundador, Ingeniero de Software y Diseñador de Producto",
+  "captaDescription": "Co-fundé una plataforma que automatiza reclamos de clientes y operaciones de mesa de ayuda",
+  "captaLongDescription": "Capta es una plataforma que automatiza reclamos de clientes y operaciones de mesa de ayuda a través de flujos configurables, reglas de SLA y análisis",
+  "captaResponsabilities": "- Contribuir al desarrollo del primer MVP del producto. \n- Diseñar la interfaz de usuario/UX en Figma y establecer un sistema de diseño ligero para garantizar consistencia y velocidad. \n- Configurar procesos de entrega y herramientas para planificar sprints (JIRA + flujos de desarrollo)",
+  "captaPage": "Página de Capta"
 }
