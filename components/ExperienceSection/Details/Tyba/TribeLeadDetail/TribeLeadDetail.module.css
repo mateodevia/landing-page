@@ -9,8 +9,9 @@
 }
 
 .image {
-  width: 100%;
-  margin: auto 0
+  width: 150%;
+  margin: auto -25%;
+  max-height: 100%;
 }
 
 .text_container {

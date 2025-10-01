@@ -11,7 +11,7 @@ function MidBackendDetail(props) {
         <div className={styles.image_container}>
           <img
             className={styles.image}
-            src='/ExperienceSection/Details/tybaApp.png'
+            src='/ExperienceSection/Details/tybaStocks.png'
             alt=''
           />
         </div>

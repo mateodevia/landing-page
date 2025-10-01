@@ -11,7 +11,7 @@ function TribeLeadDetail(props) {
         <div className={styles.image_container}>
           <img
             className={styles.image}
-            src='/ExperienceSection/Details/tybaCO.webp'
+            src='/ExperienceSection/Details/tybaPortfolio.png'
             alt=''
           />
         </div>

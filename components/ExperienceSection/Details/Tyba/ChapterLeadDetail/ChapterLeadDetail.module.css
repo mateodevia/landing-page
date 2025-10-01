@@ -3,11 +3,13 @@
 }
 
 .image_container {
-  width: 250px;
+  width: 350px;
 }
 
 .image {
-  width: 100%;
+  width: 140%;
+  margin: auto -20%;
+  max-height: 100%;
 }
 
 .text_container {
