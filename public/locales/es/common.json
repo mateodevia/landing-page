@@ -62,5 +62,7 @@
   "captaDescription": "Co-fundé una plataforma que automatiza las reclamaciones de clientes y las operaciones de soporte técnico.",
   "captaLongDescription": "Capta es una plataforma que automatiza las reclamaciones de clientes y las operaciones de soporte técnico a través de flujos de trabajo configurables, reglas de SLA y análisis.",
   "captaResponsibilities": "- Contribuir al desarrollo del primer MVP del producto. \n- Diseñar la interfaz de usuario/UX en Figma y establecer un sistema de diseño ligero para garantizar consistencia y velocidad. \n- Configurar procesos de entrega y herramientas para planificar sprints (JIRA + flujos de desarrollo)",
-  "captaPage": "Página principal de Capta"
+  "captaPage": "Página principal de Capta",
+  "metaTitle": "Mateo Devia — Tech Lead e Ingeniero de Software Senior",
+  "metaDescription": "Mateo Devia Vega — Tech Lead e Ingeniero de Software Senior. Head de Backend en tyba, liderando 26 ingenieros construyendo una plataforma wealth-tech serverless basada en microservicios. Experto en TypeScript, AWS, diseño de sistemas y soluciones impulsadas por IA."
 }
