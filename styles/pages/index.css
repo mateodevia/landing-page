@@ -29,9 +29,14 @@
   flex-direction: column;
 }
 
+.experience-section {
+  background-color: var(--background);
+}
+
 .footer-section {
-  height: fit-content;
+  flex-grow: 1;
   background-color: var(--secondary);
+  overflow: hidden;
 }
 
 .sectionTittle {

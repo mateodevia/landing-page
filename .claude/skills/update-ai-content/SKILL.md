@@ -73,7 +73,8 @@ Rewrite `public/llms.txt` from scratch using ALL meaningful text from the locale
 ### 3. Verify SEO meta keys in both locale files
 - Check that `public/locales/en/common.json` has both `metaTitle` and `metaDescription` keys.
 - Check that `public/locales/es/common.json` has both `metaTitle` and `metaDescription` keys.
-- If either is missing, add them. The English metaDescription should be a concise (≤160 char) summary of the aboutMeText. The Spanish one should be its translation.
+- If either is missing, add them. The English metaDescription must be ≤160 chars (Google truncates at 160). The Spanish one should be its translation.
+- **Important:** `metaTitle` and `metaDescription` are NOT resolved via `t()` on the client. They are read directly from the locale JSON file in `getStaticProps` (via `fs.readFileSync`) and passed as props to the page component. This is intentional — it avoids i18n client-side hydration issues and guarantees the values are always baked into the SSG'd HTML. Do not change this pattern.
 
 ### 4. Verify static SEO files exist and are correct
 - `public/robots.txt` must exist and reference `https://mateodevia.com/sitemap.xml`.

@@ -2,7 +2,7 @@ import Head from "next/head";
 import StartSection from "../../components/StartSection/StartPage";
 import SkillsGraph from "../../components/SkillsGraph/SkillsGraph";
 import ExperienceSection from "../../components/ExperienceSection/ExperienceSection";
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import FooterSection from "../../components/FooterSection/FooterSection";
 import CertificationsSection from "../../components/CertificationsSection/CertificationsSection";
 import { useTranslation } from "next-i18next";
@@ -11,13 +11,15 @@ import { getI18nPaths } from "../../getI18nPaths";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import AboutSection from "../../components/AboutSection/AboutSection";
 import { useRouter } from "next/router";
+import fs from "fs";
+import path from "path";
 
 const BASE_URL = "https://mateodevia.com";
 
 const OG_LOCALES = { en: "en_US", es: "es_ES" };
 
-const Homepage = () => {
-  const { t, i18n } = useTranslation("common");
+const Homepage = ({ metaTitle, metaDescription }) => {
+  const { t } = useTranslation("common");
   const { query } = useRouter();
   const locale = query.locale || "en";
   const aboutRef = useRef();
@@ -27,8 +29,6 @@ const Homepage = () => {
   };
 
   const canonicalUrl = `${BASE_URL}/${locale}`;
-  const metaTitle = t("metaTitle");
-  const metaDescription = t("metaDescription");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -126,14 +126,18 @@ export const getStaticPaths = () => ({
   paths: getI18nPaths(),
 });
 
-export const getStaticProps = async (ctx) => ({
-  props: {
-    ...(await serverSideTranslations(
-      ctx?.params?.locale,
-      ["common"],
-      i18nextConfig
-    )),
-  },
-});
+export const getStaticProps = async (ctx) => {
+  const locale = ctx?.params?.locale || "en";
+  const localePath = path.join(process.cwd(), "public/locales", locale, "common.json");
+  const messages = JSON.parse(fs.readFileSync(localePath, "utf8"));
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"], i18nextConfig)),
+      metaTitle: messages.metaTitle,
+      metaDescription: messages.metaDescription,
+    },
+  };
+};
 
 export default Homepage;
