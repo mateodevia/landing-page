@@ -62,5 +62,7 @@
   "captaDescription": "Co-founded a platform that automates client claims and help-desk operations",
   "captaLongDescription": "Capta is a platform that automates client claims and help-desk operations through configurable workflows, SLA rules, and analytics",
   "captaResponsibilities": "- Contributing to building the first MVP of the product. \n- Designing the product’s UI/UX in Figma and establishing a lightweight design system to ensure consistency and speed. \n- Setting up delivery processes and tooling (JIRA + dev workflows) to plan sprints, track progress, and improve team predictability.",
-  "captaPage": "Capta's home page"
+  "captaPage": "Capta's home page",
+  "metaTitle": "Mateo Devia — Tech Lead & Senior Software Engineer",
+  "metaDescription": "Tech Lead & Senior Software Engineer. Head of Backend at tyba, leading 26 engineers on a serverless, microservice wealth-tech platform. TypeScript, AWS, AI."
 }
