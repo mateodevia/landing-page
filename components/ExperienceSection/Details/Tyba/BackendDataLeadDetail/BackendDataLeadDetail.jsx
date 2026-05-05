@@ -1,8 +1,8 @@
 import * as React from "react";
 import { useTranslation } from "next-i18next";
-import styles from "./SquadLeadDetail.module.css";
+import styles from "./BackendDataLeadDetail.module.css";
 
-function SquadLeadDetail(props) {
+function BackendDataLeadDetail() {
   const { t } = useTranslation("common");
   const decodeHtml = (content) =>
     content
@@ -12,23 +12,34 @@ function SquadLeadDetail(props) {
       .replace(/&#39;/g, "'")
       .replace(/&amp;/g, "&");
   const highlightTerms = [
-    "Peruvian version of tyba",
-    "design and development",
-    "cross-functional collaboration",
-    "performance monitoring and incident resolution",
-    "high code quality standards",
-    "rate-limiting utility",
-    "Redis",
-    "SAGA pattern",
-    "most profitable product",
-    "version de tyba para Peru",
-    "diseno y desarrollo",
-    "colaboracion transversal",
-    "monitoreo de desempeno y resolucion de incidentes",
-    "altos estandares de calidad de codigo",
-    "rate limiting",
-    "patron SAGA",
-    "producto mas rentable",
+    "data architecture capabilities",
+    "unify business data",
+    "data-driven decisions",
+    "data architecture standards",
+    "cross-team initiatives",
+    "security and operational excellence",
+    "data ingestion microservices",
+    "data lake",
+    "monorepo architecture",
+    "CI/CD pipelines",
+    "infrastructure-as-code",
+    "AI agent",
+    "SQL queries",
+    "arquitectura de datos",
+    "unificar la información del negocio",
+    "gobierno del dato",
+    "decisiones basadas en datos",
+    "iniciativas entre equipos",
+    "seguridad y excelencia operativa",
+    "microservicios de ingestión",
+    "lago de datos",
+    "arquitectura monorepo",
+    "pipelines de CI/CD",
+    "infraestructura como código",
+    "agente con IA",
+    "consultas SQL",
+    "data mart",
+    "ingeniería de datos",
   ];
   const escapeRegExp = (content) =>
     content.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -55,14 +66,14 @@ function SquadLeadDetail(props) {
         <div className={styles.image_container}>
           <img
             className={styles.image}
-            src='/ExperienceSection/Details/tybaPE.webp'
+            src='/ExperienceSection/Details/tybaAdvisor.png'
             alt=''
           />
         </div>
         <div className={styles.text_container}>
           <p
             dangerouslySetInnerHTML={{
-              __html: highlightText(t("squadLeadLongDescription")),
+              __html: highlightText(t("backendDataLeadLongDescription")),
             }}
           />
           <a
@@ -77,7 +88,7 @@ function SquadLeadDetail(props) {
       </div>
       <h4 className={styles.Responsibilities_title}>{t("responsibilities")}</h4>
       <ul className={styles.Responsibilities}>
-        {toBulletItems(t("squadLeadResponsibilities")).map((item) => (
+        {toBulletItems(t("backendDataLeadResponsibilities")).map((item) => (
           <li
             key={item}
             dangerouslySetInnerHTML={{ __html: highlightText(item) }}
@@ -86,7 +97,7 @@ function SquadLeadDetail(props) {
       </ul>
       <h4 className={styles.Responsibilities_title}>{t("achievements")}</h4>
       <ul className={styles.Responsibilities}>
-        {toBulletItems(t("squadLeadAchievements")).map((item) => (
+        {toBulletItems(t("backendDataLeadAchievements")).map((item) => (
           <li
             key={item}
             dangerouslySetInnerHTML={{ __html: highlightText(item) }}
@@ -97,4 +108,4 @@ function SquadLeadDetail(props) {
   );
 }
 
-export default SquadLeadDetail;
+export default BackendDataLeadDetail;

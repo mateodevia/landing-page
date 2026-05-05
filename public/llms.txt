@@ -12,30 +12,47 @@ I’m a Tech Lead / AI-minded Senior Software Engineer who loves turning complex
 
 ## Professional Experience
 
-### Head of Backend — tyba (2024–present)
+### Head of Backend & Data — tyba (2026 - present)
 
-**Description:** Full time job leading a team of 26 engineers building a serverless microservice-based wealth-tech platform.
+**Description:** Expanded scope to Head of Data, leading the data engineering function and owning the company’s data platform and pipeline infrastructure.
 
-**Long description:** In this role, I lead a team of 26 engineers building a microservice-based investment platform and modern APIs in a serverless architecture using TypeScript, AWS, GitHub Actions, among others.
+**Long description:** In this role, I design and lead the implementation of data architecture capabilities that unify business data, improve governance, and enable faster data-driven decisions across the organization.
 
 **Responsibilities:**
-- Steering major architectural decisions for the backend components, adhering to industry best practices.
-- Technical enablement for all the backend tools to improve the developer experience (DX), and overall development efficiency.
-- Orchestrating and supervising the 9 squads of the company to ensure alignment with company priorities.
-- Distributing devs efficiently among the different backend teams to maximize productivity and meet project deadlines.
-- Championing the career growth of our backend engineers by providing mentorship and guidance.
+- Defining data architecture standards for ingestion, storage, governance, and analytics consumption.
+- Leading cross-team initiatives to align backend systems and data platforms with business priorities.
+- Ensuring security and operational excellence across data pipelines and environments.
 
 **Achievements:**
-- Designed and implemented a robust AI framework and architecture for the company, leveraging MCP and LangChain to enable advanced AI-driven solutions across the organization.
--Pioneered the use of clean architectures for the new microservices of the company. Enabling faster development and easier maintenance.
+- Created data ingestion microservices to centralize heterogeneous sources into a single data lake while complying with technology and security standards.
+- Migrated all data software artifacts into a monorepo architecture with CI/CD pipelines, multiple deployment environments, and infrastructure-as-code standards.
+- Developed an AI agent that automatically writes SQL queries over the company data mart from natural language prompts, improving data accessibility for non-technical stakeholders.
 
 ---
 
-### Backend Tribe Lead — tyba
+### Head of Backend — tyba (2024 - present)
 
-**Description:** Full time job supervising three backend development teams, overseeing their day-to-day activities, performance, and professional growth.
+**Description:** Full time job leading a team of 26 engineers building a serverless microservice-based wealth-tech platform.
 
-**Long description:** In this role, I supervised three backend development teams, overseeing their day-to-day activities, performance, and professional growth.
+**Long description:** I lead <strong>26 engineers</strong> shipping a <strong>serverless</strong>, <strong>microservice-based investment platform</strong> on TypeScript, AWS, and GitHub Actions.
+
+**Responsibilities:**
+- Own backend <strong>architecture</strong> and internal tooling for better <strong>DX</strong>; keep the company’s <strong>9 squads</strong> aligned with priorities.
+- Balance staffing across squads to protect delivery and deadlines.
+- Champion <strong>mentorship</strong> and career growth for backend engineers.
+
+**Achievements:**
+- Rolled out company-wide <strong>AI architecture</strong>: <strong>centralized MCP gateway</strong>, internal/external tools and agents, secure discovery/auth, reusable skills—about <strong>50%</strong> higher developer productivity.
+- Shipped a <strong>code review agent</strong> (<strong>human-in-the-loop</strong>, <strong>LLM-as-a-judge</strong>) trained on JIRA history, plus a <strong>TDD vibe-coding skill</strong> that writes code from specs and learns from senior PRs.
+- Broadened <strong>testing strategy</strong>: <strong>stage testing</strong> on anonymized production data, first frontend <strong>E2E</strong> suite, in-memory <strong>SQS/SNS</strong> replicas for local/CI; standardized <strong>clean architecture</strong> for new microservices.
+
+---
+
+### Backend Tribe Lead — tyba (2023)
+
+**Description:** Full time job supervising three backend development teams, overseeing their day-to-day activities, performance, and professional growth
+
+**Long description:** In this role, I supervised <strong>three backend development teams</strong>, overseeing their day-to-day activities, performance, and professional growth.
 
 **Responsibilities:**
 - Making critical architectural decisions, ensuring alignment with industry best practices and long-term business goals.
@@ -43,13 +60,15 @@ I’m a Tech Lead / AI-minded Senior Software Engineer who loves turning complex
 - Coordinating cross-functional initiatives of the company with other teams to ensure coherence among the overall system.
 
 **Achievements:**
-- Designed and implemented a company-wide event-driven architecture standard, leveraging AWS SQS/SNS for messaging, Terraform for infrastructure as code, and a monorepo approach to streamline development workflows and ensure architectural consistency across all backend services.
+- Designed a fault-resilience framework for company messaging queues using autonomous retries, exponential backoff policies, and dead-letter queues to protect critical flows and reduce incident impact.
+- Refactored one of the company’s most critical microservices (KYC) to the new event-driven architecture I designed, decoupling services and introducing topic/queue-based communication with multiple external and internal transversal microservices.
+- Designed and implemented a company-wide event-driven architecture standard, leveraging AWS SQS/SNS for messaging, Terraform for infrastructure as code, and a monorepo approach to streamline development workflows and ensure architectural consistency across backend services.
 
 ---
 
-### Backend Squad Lead — tyba
+### Backend Squad Lead — tyba (2022 - 2023)
 
-**Description:** Full time job leading a backend team responsible for maintaining the Peruvian version of tyba.
+**Description:** Full time job leading a backend team responsible for maintaining the Peruvian version of tyba
 
 **Long description:** In this role, I led a backend team responsible for maintaining the Peruvian version of tyba.
 
@@ -60,97 +79,124 @@ I’m a Tech Lead / AI-minded Senior Software Engineer who loves turning complex
 - Upholding a high standard of code quality through code reviews, best practices enforcement, and continuous improvement initiatives.
 
 **Achievements:**
-- Improved the SAGA Pattern implementation of the company, by adding direct access to DB in the orchestrator microservice.
+- Created a company-wide rate-limiting utility for external API integrations, leveraging Redis as a low-latency state manager plus internal logical queues and locks to control throughput safely.
+- Improved the SAGA pattern implementation by adding direct DB access in the orchestrator microservice, reducing orchestration latency and failure scenarios.
 - Established the Peruvian version of tyba as the most profitable product in the company.
 
 ---
 
-### Mid Backend Developer — tyba
+### Mid Backend Developer — tyba (2021 - 2022)
 
-**Description:** Full time job as backend developer for a Fintech company used by thousands of users.
+**Description:** Full time role as backend developer for a fintech platform used by thousands of users.
 
-**Long description:** I worked as a backend engineer at tyba, a Fintech startup that provides various investment and financial services to their users through innovative tech solutions.
+**Long description:** In this role, I designed and delivered core backend capabilities for mutual funds, portfolio operations, and customer communication features across the tyba platform.
 
 **Responsibilities:**
-- Design and implementation of new features in the app.
-- Continuous improvement of the backend microservices.
-- Bug fixing and support.
+- Backend design and implementation of fintech product capabilities in microservice environments.
+- Continuous backend reliability, performance, and maintainability improvements.
+- Cross-team collaboration with product and operations to deliver production-ready features.
+
+**Achievements:**
+- Designed and implemented an accounting service to enable portfolio rebalancing for Colombia mutual funds, including tax calculations and tax translation between funds.
+- Designed and implemented a dynamic fund creation mechanism in the mutual funds platform, replacing the hardcoded JSON catalog with a database-driven model.
+- Designed a company-wide generic dashboard banner component to deliver key client communications; the implementation was robust enough to be used for 5+ years with zero core modifications.
 
 ---
 
-### Co Founder, Software Engineer and Product Designer — Capta
-
-**Description:** Co-founded a platform that automates client claims and help-desk operations.
-
-**Long description:** Capta is a platform that automates client claims and help-desk operations through configurable workflows, SLA rules, and analytics.
-
-**Responsibilities:**
-- Contributing to building the first MVP of the product.
-- Designing the product's UI/UX in Figma and establishing a lightweight design system to ensure consistency and speed.
-- Setting up delivery processes and tooling (JIRA + dev workflows) to plan sprints, track progress, and improve team predictability.
-
----
-
-### Innovation Fullstack Developer — Inalambria
+### Innovation Fullstack Developer — Inalambria Internacional (2020 - 2021)
 
 **Description:** Full time job. Web development, product design, software design.
 
 **Long description:** My first full-time job was at Inalambria, an instant messaging tech company. I was part of the innovation team, where I participated in the design and implementation of new software products for the company.
 
 **Responsibilities:**
-- Product design and development.
-- Design and implementation of the CI/CD pipelines.
-- Maintenance of products in AWS.
-- Architectural design and implementation of highly scalable products.
+- Product design and development for new innovation initiatives.
+- End-to-end software design and implementation across frontend and backend.
+- Platform maintenance and operational support for production workloads in AWS.
+
+**Achievements:**
+- Designed and implemented the first CI/CD pipeline in the company using CircleCI, and wrote around 200 automated tests to establish strong initial coverage for the flagship product.
+- Designed and implemented a horizontally scalable inbound messaging microservice for Facebook, SMS, RCS, and WhatsApp, using stateless processing and RabbitMQ to rate-limit and protect core services.
+- Led the flagship product MVP production deployment in AWS, configuring VPCs, security groups, load balancers, Elastic Beanstalk environments, and bastion hosts.
 
 ---
 
-### Freelance Software Development — Sinco
+### Co Founder, Software Engineer and Product Designer — Capta (2020 - 2021)
+
+**Description:** Co-founded a platform that automates client claims and help-desk operations
+
+**Long description:** Capta is a platform that automates client claims and help-desk operations through configurable workflows, SLA rules, and analytics
+
+**Responsibilities:**
+- Contributing to building the first MVP of the product.
+- Designing the product’s UI/UX in Figma and establishing a lightweight design system to ensure consistency and speed.
+- Setting up delivery processes and tooling (JIRA + dev workflows) to plan sprints, track progress, and improve team predictability.
+
+**Achievements:**
+- Not specified in locale content.
+
+---
+
+### Freelance Software Development — Sincosoft (2020)
 
 **Description:** Developed a content management web tool with high standards of security, maintainability, and extensibility.
 
+**Long description:** Not specified in locale content.
+
+**Responsibilities:**
+- Not specified in locale content.
+
+**Achievements:**
+- Not specified in locale content.
+
 ---
 
-### Python Research Assistant — Universidad de los Andes
+### Python Research Assistant — Universidad de los Andes (2020)
 
-**Description:** Research assistant on the curriculum migration from Java to Python for the introductory programming courses. Administered the help center for students of introductory programming courses.
+**Description:** Research assistant on the curriculum migration from Java to Python for the introductory programming courses.
+
+**Long description:** Not specified in locale content.
+
+**Responsibilities:**
+- Not specified in locale content.
+
+**Achievements:**
+- Not specified in locale content.
 
 ---
 
-### Software Architecture Teaching Assistant — Universidad de los Andes
+### Software Architecture Teaching Assistant — Universidad de los Andes (2019)
 
-**Description:** Teaching Assistant focused on producing teaching material for students, and the general redesign of the Software Architecture and Design course.
+**Description:** Teaching Assistant focused on producing teaching material for students, and the general redesign of the Software Architecture and Design course
+
+**Long description:** Not specified in locale content.
+
+**Responsibilities:**
+- Not specified in locale content.
+
+**Achievements:**
+- Not specified in locale content.
 
 ---
 
 ## Education
 
-### Cum Laude Bachelor Degree
-**Institution:** Universidad de los Andes, Colombia
-
-I obtained a Cum Laude B.S degree in Systems and Computing Engineering from Universidad de los Andes. The Cum Laude recognition is given to the students who had a GPA within the highest 3% of the last 5 years in the engineering faculty.
-
-### High School Graduation
-Graduated from high school in a bilingual school in Colombia.
+Cum Laude Bachelor Degree — I obtained a Cum Laude B.S degree in Systems and Computing Engineering from Universidad de los Andes. The Cum Laude recognition is given to the students who had a GPA within the highest 3% of the last 5 years in the engineering faculty.
+High School Graduation — Graduated from high school in a bilingual school in Colombia
 
 ---
 
 ## Technical Skills
 
-- **Languages:** TypeScript, JavaScript, Python
-- **Cloud & Infrastructure:** AWS (Lambda, SQS, SNS, DynamoDB, API Gateway), Terraform, GitHub Actions
-- **Architecture:** Microservices, Serverless, Event-Driven Architecture, Clean Architecture, SAGA Pattern
-- **AI/ML:** LangChain, MCP (Model Context Protocol), AI-driven solutions, AI framework design
-- **Practices:** CI/CD, Code Reviews, System Design, Developer Experience (DX), Monorepo, Software Architecture
-- **Tools:** JIRA, Figma, Docker, Git
+TypeScript, Node.js, AWS, Microservices, Serverless, LangChain, MCP, Terraform, GitHub Actions, CI/CD, Clean Architecture, SAGA Pattern, Event-Driven Architecture, Figma, Docker, Git
 
 ---
 
 ## Contact & Profiles
 
-- **Website:** https://mateodevia.com
-- **LinkedIn:** https://www.linkedin.com/in/mateo-devia/
-- **GitHub:** https://github.com/mateodevia
+- Website: https://mateodevia.com
+- LinkedIn: https://www.linkedin.com/in/mateo-devia/
+- GitHub: https://github.com/mateodevia
 
 ---
 

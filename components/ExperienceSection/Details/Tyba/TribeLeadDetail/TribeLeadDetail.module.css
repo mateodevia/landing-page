@@ -1,22 +1,27 @@
 .main_container {
   display: flex;
+  align-items: flex-start;
+  gap: 24px;
 }
 
 .image_container {
-  display: flex;
-  align-items: center;
-  width: 250px;
+  width: 38%;
+  min-width: 220px;
+  max-width: 360px;
+  padding: 12px 8px 12px 0;
 }
 
 .image {
-  width: 150%;
-  margin: auto -25%;
-  max-height: 100%;
+  width: 100%;
+  margin: 0;
+  display: block;
+  max-height: 420px;
+  object-fit: contain;
 }
 
 .text_container {
-  width: 200px;
-  flex-grow: 1;
+  width: auto;
+  flex: 1;
 }
 
 .link {
@@ -35,16 +40,36 @@
 }
 
 .Responsibilities {
-  white-space: pre-wrap;
+  white-space: normal;
+  padding-left: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
 }
 
-@media only screen and (max-width: 570px) {
+.Responsibilities li {
+  margin-bottom: 8px;
+  line-height: 1.45;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.text_container strong,
+.Responsibilities strong {
+  font-weight: 400;
+  color: var(--primary);
+}
+
+@media only screen and (max-width: 900px) {
   .main_container {
     display: inline-block;
   }
 
   .image_container {
     width: 100%;
+    max-width: 520px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 20px;
   }
 
   .text_container {

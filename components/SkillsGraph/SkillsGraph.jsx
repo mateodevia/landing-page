@@ -121,7 +121,7 @@ const data = {
     },
     {
       id: 'Artificial Intelligence',
-      size: 130,
+      size: 140,
       color: '#23b723',
       type: 'subject',
       text: 'White',
@@ -138,7 +138,7 @@ const data = {
     },
     {
       id: 'Phidata',
-      size: 60,
+      size: 40,
       color: '#f5f5f5',
       type: 'tool',
       icon: '/SkillsGraph/phidata.svg',
@@ -146,23 +146,31 @@ const data = {
     },
     {
       id: 'Cursor',
-      size: 60,
+      size: 80,
       color: '#f5f5f5',
       type: 'tool',
       icon: '/SkillsGraph/cursor.svg',
       cluster: 1,
     },
     {
-      id: 'Claude Code',
-      size: 60,
+      id: 'Claude',
+      size: 80,
       color: '#f5f5f5',
       type: 'tool',
       icon: '/SkillsGraph/claude.svg',
       cluster: 1,
     },
     {
-      id: 'MCP',
+      id: 'Bedrock',
       size: 60,
+      color: '#f5f5f5',
+      type: 'tool',
+      icon: '/SkillsGraph/bedrock.png',
+      cluster: 1,
+    },
+    {
+      id: 'MCP',
+      size: 80,
       color: '#f5f5f5',
       type: 'tool',
       icon: '/SkillsGraph/mcp.svg',
@@ -202,7 +210,7 @@ const data = {
     },
     {
       id: 'Mongo',
-      size: 70,
+      size: 40,
       color: '#f5f5f5',
       type: 'tool',
       icon: '/SkillsGraph/mongo.svg',
@@ -258,7 +266,7 @@ const data = {
     },
     {
       id: 'GitHub',
-      size: 60,
+      size: 80,
       color: '#f5f5f5',
       type: 'tool',
       icon: '/SkillsGraph/github.svg',
@@ -350,7 +358,7 @@ const data = {
       color: '#A13AF2',
       type: 'subject',
       text: 'White',
-      cluster: 2,
+      cluster: 3,
     },
     {
       id: 'Leadership',
@@ -358,7 +366,7 @@ const data = {
       color: '#BE79F3',
       type: 'subject',
       text: 'White',
-      cluster: 2,
+      cluster: 3,
     },
     {
       id: 'Team Management',
@@ -366,7 +374,7 @@ const data = {
       color: '#BE79F3',
       type: 'subject',
       text: 'White',
-      cluster: 1,
+      cluster: 3,
     },
     {
       id: 'Project Management',
@@ -374,7 +382,7 @@ const data = {
       color: '#BE79F3',
       type: 'subject',
       text: 'White',
-      cluster: 1,
+      cluster: 3,
     },
     {
       id: 'Agile',
@@ -382,7 +390,7 @@ const data = {
       color: '#BE79F3',
       type: 'subject',
       text: 'White',
-      cluster: 2,
+      cluster: 3,
     },
     {
       id: 'Blockchain',
@@ -394,7 +402,7 @@ const data = {
     },
     {
       id: 'Solidity',
-      size: 60,
+      size: 40,
       color: '#f5f5f5',
       type: 'tool',
       icon: '/SkillsGraph/solidity.svg',
@@ -402,7 +410,7 @@ const data = {
     },
     {
       id: 'Ethereum',
-      size: 60,
+      size: 40,
       color: '#f5f5f5',
       type: 'tool',
       icon: '/SkillsGraph/ethereum.svg',
@@ -410,7 +418,7 @@ const data = {
     },
     {
       id: 'MetaMask',
-      size: 60,
+      size: 40,
       color: '#f5f5f5',
       type: 'tool',
       icon: '/SkillsGraph/metamask.svg',
@@ -418,7 +426,7 @@ const data = {
     },
     {
       id: 'Hardhat',
-      size: 60,
+      size: 40,
       color: '#f5f5f5',
       type: 'tool',
       icon: '/SkillsGraph/hardhat.svg',
@@ -426,7 +434,7 @@ const data = {
     },
     {
       id: 'Vercel',
-      size: 60,
+      size: 40,
       color: '#f5f5f5',
       type: 'tool',
       icon: '/SkillsGraph/vercel.svg',
@@ -615,6 +623,11 @@ const data = {
       value: 5,
     },
     {
+      source: 'Testing',
+      target: 'GitHub',
+      value: 5,
+    },
+    {
       source: 'Technical Management',
       target: 'Software Engineering',
       value: 20,
@@ -696,7 +709,7 @@ const data = {
     },
     {
       source: 'Artificial Intelligence',
-      target: 'Claude Code',
+      target: 'Claude',
       value: 5,
     },
     {
@@ -727,6 +740,16 @@ const data = {
     {
       source: 'Cloud Computing',
       target: 'Vercel',
+      value: 5,
+    },
+    {
+      source: 'Artificial Intelligence',
+      target: 'Bedrock',
+      value: 5,
+    },
+    {
+      source: 'Bedrock',
+      target: 'AWS',
       value: 5,
     },
   ],

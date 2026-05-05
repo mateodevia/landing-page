@@ -8,6 +8,8 @@ const Custom = styled(Dialog)`
     background-color: rgb(245, 245, 245, 0.9);
   }
   .MuiDialog-paper {
+    width: min(66.67vw, 1100px);
+    max-width: calc(100vw - 48px);
     border-radius: 20px;
     padding: 30px;
     background-color: #ebebeb;
@@ -20,25 +22,25 @@ const Custom = styled(Dialog)`
   }
 `;
 
-function CustomDialog(props) {
+function CustomDialog({ title, sub_title, children, onClose, open }) {
   return (
     <Custom
-      {...props}
-      onClose={props.onClose}
-      open={props.open}
-      onBackdropClick={props.onClose}
+      onClose={onClose}
+      open={open}
+      onBackdropClick={onClose}
+      maxWidth={false}
     >
       <div className='flexbox'>
         <img
           src='/icons/close.svg'
           alt='close icon'
           className={styles.close_icon}
-          onClick={props.onClose}
+          onClick={onClose}
         />
       </div>
-      <h1 className={styles.dialog_title}>{props.title}</h1>
-      <h2 className={styles.dialog_sub_title}>{props.sub_title}</h2>
-      {props.children}
+      <h1 className={styles.dialog_title}>{title}</h1>
+      <h2 className={styles.dialog_sub_title}>{sub_title}</h2>
+      {children}
     </Custom>
   );
 }
